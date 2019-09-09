@@ -33,7 +33,7 @@ TBC
 
 _____________________________
 header-images from left to right:\
-_On the Seventeenth Day,13th century rubbing of a 4th century text\_
-_Cuneiform tablet: private letter,ca. 20th–19th century B.C.\_
-_The Crucifixion,ca. 1495\_
-_Bowl with Arabic Inscription, "Blessing, Prosperity, Well-being, Happiness",late 10th–11th century\_
+On the Seventeenth Day,13th century rubbing of a 4th century text\
+Cuneiform tablet: private letter,ca. 20th–19th century B.C.\
+The Crucifixion,ca. 1495\
+Bowl with Arabic Inscription, "Blessing, Prosperity, Well-being, Happiness",late 10th–11th century\
