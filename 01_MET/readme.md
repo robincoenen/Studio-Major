@@ -32,7 +32,7 @@ TBC
 
 
 _____________________________
-header-images from left to right:\
+*Header-images from left to right:*\
 On the Seventeenth Day,13th century rubbing of a 4th century text\
 Cuneiform tablet: private letter,ca. 20th–19th century B.C.\
 The Crucifixion,ca. 1495\
