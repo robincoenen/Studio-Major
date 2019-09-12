@@ -22,7 +22,7 @@ function fetchMuseumData(url) {
 // from the response, fetch objects
 function fetchObjects(data){
 
-  let objectIDs = data.objectIDs.slice(250,300);
+  let objectIDs = data.objectIDs.slice(400,500);
   console.log("fetching: " + objectIDs.length + " objects");
   objectIDs.forEach(function(n) {
     // console.log(objectBaseUrl + n);
@@ -41,19 +41,31 @@ function fetchObjects(data){
 function addObject(objectData){
     var currentID = objectData.objectID;
     var currentTitle = objectData.title;
-    var currentMedium = objectData.classification;
-    var currentReg = objectData.country;
-    var currentTime = objectData.objectBeginDate;
+    var currentBeginDate = objectData.objectBeginDate;
+    var currentGeneralDate = objectData.objectDate;
+    var currentCulture = objectData.culture;
+    var currentCountry = objectData.country;
+    var currentNationality = objectData.artistNationality;
+    var currentMedium = objectData.medium;
+    var currentClass = objectData.classification;
+    var currentTags = objectData.tags;
 
 
     //var currentDate = objectData.objectBeginDate;
     //var imgUrl = objectData.primaryImage;
     var index = myArray.length;
     myArray[index] = {};
-    myArray[index]["title"] = currentTitle;
-    myArray[index]["medium"] = currentMedium;
-    myArray[index]["region"] = currentReg;
-    myArray[index]["time"] = currentTime;
+    myArray[index]["ID"] = currentID;
+    myArray[index]["Title"] = currentTitle;
+    myArray[index]["Beginning Date"] = currentBeginDate;
+    myArray[index]["General Date"] = currentGeneralDate;
+    myArray[index]["Culture"] = currentCulture;
+    myArray[index]["Country"] = currentCountry;
+    myArray[index]["Artist nationality"] = currentCountry;
+    myArray[index]["Medium"] = currentMedium;
+    myArray[index]["Classificatiion"] = currentClass;
+    myArray[index]["Tags"] = currentTags;
+    
 
     //myArray[index]["date"] = currentDate;
     //myArray[index]["image"] = imgUrl;
