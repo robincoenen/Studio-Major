@@ -37,28 +37,29 @@ Bowl with Arabic Inscription, "Blessing, Prosperity, Well-being, Happiness",late
 
 \
 \
-\
+
 
 ## Process
 
 ### Data
 *Search Query in the open acces dataset*
 
-"Typography": 5 hits
-"Word": 1,228 hits
-"Calligraphy": 1,237 hits
-"Calligraphies": 1,524 hits
-"Hieroglyphs": 2,389 hits
-"Written": 2,580 hits
-"Letters": 10,257 hits
+"Typography": 5 hits\
+"Word": 1,228 hits\
+"Calligraphy": 1,237 hits\
+"Calligraphies": 1,524 hits\
+"Hieroglyphs": 2,389 hits\
+"Written": 2,580 hits\
+"Letters": 10,257 hits\
+\
+"Text": 10,627 hits\
 
-"Text": 10,627 hits
-
-I decided to take "Text" as a search query, although its results also might show items which dont contain visual _texts_.\
-I executed a sampletest with *400 items* and it showed that in average of an amount of *80 items,* around *5* of them dont contain visual texts.
-A sample test with word "Letters" resulted in *8* with no visual text content per *80 items.*\
-Other search queries might be more exact (e.g Calligraphy), but it misses the very interesting amount of ca. 9500 other visuals which are also interesting in terms of visuality of text, but not tagged as "calligraphy".
-
+I decided to take **"Text"** as a search query, although its results also might show items which dont contain visual texts.\
+I executed a sampletest with **400 items** and it showed that in average of an amount of **80 items,** around **5** of them dont contain visual texts.
+A sample test with word "Letters" resulted in **8** with no visual text content per **80 items.**\
+Other search queries might be more exact (e.g Calligraphy), but it misses the very interesting amount of ca. 9500 other visuals which are also interesting in terms of visuality of text, but not tagged as "calligraphy".\
+\
+From left to right:
 
 
 
