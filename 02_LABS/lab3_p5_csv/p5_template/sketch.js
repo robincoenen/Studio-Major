@@ -1,12 +1,19 @@
 
+let table;
 
+function preload() {
+  //my table is comma separated value "csv"
+  //and has a header specifying the columns labels
+  table = loadTable('data_selected_b.csv', 'csv', 'header');
+}
 
 function setup() {
- 	createCanvas(800,600); 
-
+ 	
  	background(200);
-  	fill(255,45,241);
-  	strokeWeight(10);
+  fill(255,45,241);
+  strokeWeight(10);
+  
+  print(table.getColumn('Title'));
 
 	
 	var yPos = 50;
@@ -26,6 +33,5 @@ function setup() {
 }
 
 function draw() {
-   	
-
+   	print(table.getColumn('name'));
 }

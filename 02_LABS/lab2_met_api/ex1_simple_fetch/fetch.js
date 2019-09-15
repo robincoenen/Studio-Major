@@ -1,3 +1,4 @@
+// var fs = require('fs');
 
 const searchUrl = 'https://collectionapi.metmuseum.org/public/collection/v1/search?q=text';
 //const searchUrl = 'https://collectionapi.metmuseum.org/public/collection/v1/tags';
@@ -14,7 +15,7 @@ function fetchMuseumData(url) {
     .fetch(url)
     .then(data => data.json())
     .then(data => {
-      console.log('fetchMuseumData', data);
+      // console.log('fetchMuseumData', data);
       fetchObjects(data);
     });
 }
@@ -22,7 +23,9 @@ function fetchMuseumData(url) {
 // from the response, fetch objects
 function fetchObjects(data){
 
-  let objectIDs = data.objectIDs.slice(400,500);
+// .slice(1001,1021)
+
+  let objectIDs = data.objectIDs.slice(0,5000);
   console.log("fetching: " + objectIDs.length + " objects");
   objectIDs.forEach(function(n) {
     // console.log(objectBaseUrl + n);
@@ -50,9 +53,6 @@ function addObject(objectData){
     var currentClass = objectData.classification;
     var currentTags = objectData.tags;
 
-
-    //var currentDate = objectData.objectBeginDate;
-    //var imgUrl = objectData.primaryImage;
     var index = myArray.length;
     myArray[index] = {};
     myArray[index]["ID"] = currentID;
@@ -67,17 +67,17 @@ function addObject(objectData){
     myArray[index]["Tags"] = currentTags;
     
 
-    //myArray[index]["date"] = currentDate;
-    //myArray[index]["image"] = imgUrl;
 
-    /*
-    myArray.push({
-      title: objectData.title,
-      date: objectData.objectBeginDate,
-      image: objectData.primaryImage
-    })
-    */
+    // myArray.push({
+    //   title: objectData.title,
+    //   date: objectData.objectBeginDate,
+    //   image: objectData.primaryImage
+    // })
+
     console.log('object at index', index, myArray[index]);
+    
+
+  
 }
 
 

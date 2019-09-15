@@ -28,15 +28,18 @@ Interesting questions to ask are:
 As the data visualisation deals thematically with _text_ in its broadest sense, the visual design might be inspired by the textural appearance, visuality and nature of text. 
 The visualisation could be organised in "textblock" alike shapes, readable from left to right (top to down). Furthermore it could use _text_ itself as an dataelement (e.g Titles), which might be especially interesting for an interactive approach.
 Different data relations could be visualized with the same visual principle. The image **00_mockup.jpg** should demonstrate this  principle; however a lot of details still need to be worked out. The timeline could of course be much more detailed, the clustering of content (e.g "printed") is not final etc.
-
-
-### Questions
-TBC
-
-
 _____________________________
 *Header-images from left to right:*\
 On the Seventeenth Day,13th century rubbing of a 4th century text\
 Cuneiform tablet: private letter,ca. 20th–19th century B.C.\
 The Crucifixion,ca. 1495\
 Bowl with Arabic Inscription, "Blessing, Prosperity, Well-being, Happiness",late 10th–11th century\
+
+
+## Process
+
+### Data
+
+### Design
+
+### Comments
