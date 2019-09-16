@@ -63,10 +63,29 @@ _Bodhisattva Manjushri_ (1000–1200) — Example for an element which shows up 
 
 #### Data parsing
 
+The following data was parsed from the MET-API:
+
+    var currentID = objectData.objectID;
+    var currentTitle = objectData.title;
+    var currentBeginDate = objectData.objectBeginDate;
+    var currentGeneralDate = objectData.objectDate;
+    var currentCulture = objectData.culture;
+    var currentCountry = objectData.country;
+    var currentNationality = objectData.artistNationality;
+    var currentMedium = objectData.medium;
+    var currentClass = objectData.classification;
+    var currentTags = objectData.tags;
+    
+It was written into a console and  downloaded via a function which was added into the chrome debugger (http://bgrins.github.io/devtools-snippets/#console-save)
 
 
+Finally the data which is relevant for my visualization is  the following:
 
+    var currentBeginDate = objectData.objectBeginDate;
+    var currentMedium = objectData.medium;
+    var currentClass = objectData.classification;
 
+Originally I wanted to sort the data per *Culture*, but only 1500 items of 10500 are tagged with the culture (or country) category.
 
 
 
