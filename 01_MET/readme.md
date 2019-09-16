@@ -34,6 +34,8 @@ On the Seventeenth Day,13th century rubbing of a 4th century text\
 Cuneiform tablet: private letter,ca. 20th–19th century B.C.\
 The Crucifixion,ca. 1495\
 Bowl with Arabic Inscription, "Blessing, Prosperity, Well-being, Happiness",late 10th–11th century\
+\
+\
 
 ## Process
 
@@ -58,7 +60,7 @@ Other search queries might be more exact (e.g Calligraphy), but it misses the ve
 ![](./examples.gif)
 
 From left to right:\
-_Statuette of Merer_ (1981–1802 B.C) — This interesting statuette made out of wood and a shorts with written elements (fashiontipp!) would have been missed, if not searching for _Text_ as a search query.\
+_Statuette of Merer_ (1981–1802 B.C) — This interesting statuette made out of wood has a shorts with written elements (fashiontipp!) and would have been missed, if not searching for _Text_ as a search query.\
 _Bodhisattva Manjushri_ (1000–1200) — Example for an element which shows up when searching for text, but does not contain text visually (the sculpture has a closed textscroll in its hand)
 
 #### Data parsing
@@ -84,12 +86,36 @@ Originally I wanted to sort the data per *Culture*, but only 1500 items of 10500
     var currentMedium = objectData.medium;
     var currentClass = objectData.classification;
 
-I created two new Categories, one for the classification of time into periods (e.g 0–1000) based on all individual dates of the times;\
-another classification of writing technique (e.g written, inscribed) based on the medium respectively classification categories of all items (e.g ink, clay)
+I created two new Categories (see image, set in red), one for the classification of time into **periods** (e.g 0–1000) based on all individual dates of the times;
+another classification of **writing technique** (e.g written, inscribed) based on the medium respectively classification categories of all items (e.g ink, clay).
+I am not sure yet, if I would like to sort after category **medium** provided from the MET API or my new **writing technique** category.
 
 ![illustrative images](./dataset.png)
+
+**Time periods:**\
+-4000-2000\
+-2000-1000\
+-1000-0\
+\
+0-1000\
+1000-1400\
+1400-1600\
+1600-1800\
+1800-1900\
+1900-2000\
+
+**Writing techniques**\
+Written\
+Inscribed\
+Weaved\
+Printed\
+
+
 
 
 ### Design
 
-### Comments
+### Questions
+
+— How can I sort first after **time-period,** and then sort again items after **medium** within each time-period?
+— What is the best practice to realise my sketch (pure html, p5 or d3)?
