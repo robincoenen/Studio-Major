@@ -126,3 +126,4 @@ The images are for now an example taken from each time period. I will also test 
 
 
 ### Attachment: Final draft
+![illustrative images](./sketch_poster.jpg)
