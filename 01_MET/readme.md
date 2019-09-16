@@ -110,12 +110,19 @@ Inscribed\
 Weaved\
 Printed\
 
-
-
-
 ### Design
+I would like to stress the verticallity of the visualization, inspired by long finding of long textscrolls iin the dataset. A centered layout could stress this verticallity. The medium could be printed (poster size) or displayed on screen experiencable via a long scroll.
+The colors of the sketch are not final. When having the graphic in code, I would also like to try using only grayscale and test if thats still legible.
+The chosen font *gc16* is serif, but monospaced; a rare mixe. The serif character supports the textual character of the topic; while the monospace nature gives it something modern.
+
+The images are for now an example taken from each time period. I will also test to take examples of each Medium.
 
 ### Questions
 
 — How can I sort first after **time-period,** and then sort again items after **medium** within each time-period?
 — What is the best practice to realise my sketch (pure html, p5 or d3)?
+
+
+
+
+### Attachment: Final draft
