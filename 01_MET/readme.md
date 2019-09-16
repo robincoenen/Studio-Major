@@ -55,7 +55,7 @@ I executed a sampletest with **400 items** and it showed that in average of an a
 A sample test with word "Letters" resulted in **8** with no visual text content per **80 items.**\
 Other search queries might be more exact (e.g Calligraphy), but it misses the very interesting amount of ca. 9500 other visuals which are also interesting in terms of visuality of text, but not tagged as "calligraphy".\
 
-![](examples.gif)
+![](./examples.gif)
 
 From left to right:\
 _Statuette of Merer_ (1981–1802 B.C) — This interesting statuette made out of wood and a shorts with written elements (fashiontipp!) would have been missed, if not searching for _Text_ as a search query.\
@@ -63,7 +63,8 @@ _Bodhisattva Manjushri_ (1000–1200) — Example for an element which shows up 
 
 #### Data parsing
 
-The following data was parsed from the MET-API:
+The following data was parsed from the MET-API.\ 
+It was written into a console and  downloaded via a function which was added into the chrome debugger (http://bgrins.github.io/devtools-snippets/#console-save)
 
     var currentID = objectData.objectID;
     var currentTitle = objectData.title;
@@ -76,17 +77,17 @@ The following data was parsed from the MET-API:
     var currentClass = objectData.classification;
     var currentTags = objectData.tags;
     
-It was written into a console and  downloaded via a function which was added into the chrome debugger (http://bgrins.github.io/devtools-snippets/#console-save)
-
-
-Finally the data which is relevant for my visualization is  the following:
+Finally the data which is relevant for my visualization is the following.\ 
+Originally I wanted to sort the data per *Culture*, but only 1500 items of 10500 are tagged with the culture (or country) category.
 
     var currentBeginDate = objectData.objectBeginDate;
     var currentMedium = objectData.medium;
     var currentClass = objectData.classification;
 
-Originally I wanted to sort the data per *Culture*, but only 1500 items of 10500 are tagged with the culture (or country) category.
+I created two new Categories, one for the classification of time into periods (e.g 0–1000) based on all individual dates of the times;\
+another classification of writing technique (e.g written, inscribed) based on the medium respectively classification categories of all items (e.g ink, clay)
 
+![illustrative images](./dataset.png)
 
 
 ### Design
