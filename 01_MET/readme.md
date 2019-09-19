@@ -123,7 +123,5 @@ The images are for now an example taken from each time period. I will also test 
 — What is the best practice to realise my sketch (pure html, p5 or d3)?
 
 
-
-
 ### Attachment: Final draft
 ![illustrative images](./sketch_poster.jpg)

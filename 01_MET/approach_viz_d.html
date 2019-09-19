@@ -1,0 +1,62 @@
+<div id = "app">
+</div>
+           
+<style type ="text/css">
+    #graph{
+    margin: 40%;
+    width:100%
+ }
+    
+    .unit {
+       display:inline-block;
+        width: 15px;height: 15px;
+        background-color: black;
+        margin:0;padding:0;
+    }
+    
+    .unit.grey{
+        background: grey;
+    }
+    .unit.blue {
+        background: blue;
+    }
+        
+    
+</style>
+
+<svg id="graph">
+</svg>
+
+
+
+<script>
+                       
+let container = document.getElementById('graph')
+
+    function addToContainer(color){
+        let m = document.createElement('rect')
+        m.setAttribute("height", '15');
+        m.setAttribute("width", '15');
+        container.appendChild(m);
+        m.setAttribute("x", "25");
+        m.setAttribute("y", "25");
+        m.classList.add('unit');
+        m.classList.add(color);
+        container.appendChild(m)
+}
+
+    let total = 150;
+    
+    	
+    for(let i=0; i<10; i+=1){
+       addToContainer('grey');
+    }
+    ///8000-2000 B.C.
+    for(let i=0; i<55; i+=1){
+       addToContainer('grey');
+    }
+    for( let i=0; i<8; i+=1){
+        addToContainer('black');
+    }
+    
+</script>
