@@ -25,7 +25,7 @@ function fetchObjects(data){
 
 // .slice(1001,1021)
 
-  let objectIDs = data.objectIDs.slice(0,5000);
+  let objectIDs = data.objectIDs.slice(8000,10000);
   console.log("fetching: " + objectIDs.length + " objects");
   objectIDs.forEach(function(n) {
     // console.log(objectBaseUrl + n);
@@ -52,6 +52,9 @@ function addObject(objectData){
     var currentMedium = objectData.medium;
     var currentClass = objectData.classification;
     var currentTags = objectData.tags;
+    var primaryImage = objectData.primaryImage;
+    var primaryImageSmall = objectData.primaryImageSmall;
+
 
     var index = myArray.length;
     myArray[index] = {};
@@ -63,9 +66,11 @@ function addObject(objectData){
     myArray[index]["Country"] = currentCountry;
     myArray[index]["Artist nationality"] = currentCountry;
     myArray[index]["Medium"] = currentMedium;
-    myArray[index]["Classificatiion"] = currentClass;
+    myArray[index]["Classification"] = currentClass;
     myArray[index]["Tags"] = currentTags;
-    
+    myArray[index]["primary image"] = primaryImage;
+    myArray[index]["Thumbnail"] = primaryImageSmall;
+
 
 
     // myArray.push({
