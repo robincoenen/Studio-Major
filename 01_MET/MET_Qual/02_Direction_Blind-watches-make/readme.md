@@ -22,17 +22,20 @@
 What if these clocks, just again after 100, 200 years of their standstill, measure another, new story which is constructed through the time in which they stopped? 
 It could be interesting to crossreference potential datasets which are documented in time, such as:
 
-* twitter feeds\
-* minute protocolls\
-* news\
-* thematise the value of time (see Process -> Data -> Use of Mechanical Turks\
-* google books, excerpt where the time occurs (first draft below, real data)\
+* twitter feeds
+* minute protocolls
+* news
+* thematise the value of time (see Process -> Data -> Use of Mechanical Turks
+* google books, excerpt where the time occurs (first draft below, real data)
   ![illustrative images](./02_story.png)		
 
 
 #### References
-Dougloas Gordon — 24 HOUR PSYCHO (https://www.youtube.com/watch?v=UtLg5TqqVeA) &
-Christian Marclay — THE CLOCK (https://www.youtube.com/watch?v=BXbQw0rE5UE)\
+* Dougloas Gordon — 24 HOUR PSYCHO (https://www.youtube.com/watch?v=UtLg5TqqVeA)
+* Christian Marclay — THE CLOCK (https://www.youtube.com/watch?v=BXbQw0rE5UE)
+* The blind watchmaker documentary — https://www.dailymotion.com/video/x223a3n
+* Space is the Place movie — https://www.youtube.com/watch?v=mZso7bNq-dI
+* Space is the Place soundtrack — https://www.youtube.com/watch?v=AZZx0oEdFpc
 
 ### Design Approach		
 * I inverted the clocks, it maybe increases the poetic visual nature
@@ -57,4 +60,3 @@ Most occuring time in 285 images is:
 ## Questions		
 What would be an interesting (and conceptional fitting) crossrefence?
 Which medium would transports the wanted poetic feeling best?
-
