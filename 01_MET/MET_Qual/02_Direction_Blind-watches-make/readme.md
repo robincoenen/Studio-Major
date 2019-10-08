@@ -31,7 +31,7 @@ _google books, excerpt where the time occurs (first draft below, real data)\
 
 
 #### References
-Dougloas Gordon — 24 HOUR PSYCHO (https://www.youtube.com/watch?v=UtLg5TqqVeA)\
+Dougloas Gordon — 24 HOUR PSYCHO (https://www.youtube.com/watch?v=UtLg5TqqVeA)\\
 Christian Marclay — THE CLOCK (https://www.youtube.com/watch?v=BXbQw0rE5UE)\
 
 ### Design Approach		
@@ -39,12 +39,12 @@ _I inverted the clocks, it maybe increases the poetic visual nature
 ![illustrative images](./03_inverted.png)
 _I can picture a printed as well as digital environment ( also an audiovisual piece)
 Example: Image-slider based Story telling:
-![illustrative images](./slider.png)
+![illustrative images](./04_slider.png)
 
 ## Process		
 
 ### Data		
-I used the search query and image = true as well as the starter code provided in the lab to download all images.
+I used the search query "clocks" and image = true as well as the starter code provided in the lab to download all images.
 I then prepared the images and provided them to Amazons Mechanical turk service. Within an hour all images were tagged with the right time.
 It took the mechanical turks 7 minutes and 14 seconds in average to decipher each time given in each image. The fee for each image was 0.15 cent.\
 \
@@ -56,5 +56,5 @@ Most occuring time in 285 images is:
 
 ## Questions		
 What would be an interesting (and conceptional fitting) crossrefence?
-Which medium would transports the wanted poetic feeling best ?
+Which medium would transports the wanted poetic feeling best?
 
