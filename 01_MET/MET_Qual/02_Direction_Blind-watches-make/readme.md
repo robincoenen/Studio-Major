@@ -1,5 +1,6 @@
 # Blind watches make…		
  ## Artistic approach towards the aesthetic and inherent nature of found watches in the collection	
+ [working title, title in analogy to "the blind watchmaker" ]
 
   ![illustrative images](./01_illustrative_image_a.png)		
 
@@ -24,9 +25,8 @@ It could be interesting to crossreference potential datasets which are documente
 _twitter feeds\
 _minute protocolls\
 _news\
-_crowdsourcing\
-_thematise the value of time (see Process -> Data -> Use ofMechanical Turks\
-_google books, excerpt where the time occurs (first draft below)\
+_thematise the value of time (see Process -> Data -> Use of Mechanical Turks\
+_google books, excerpt where the time occurs (first draft below, real data)\
   ![illustrative images](./02_story.png)		
 
 
@@ -37,9 +37,9 @@ Christian Marclay — THE CLOCK (https://www.youtube.com/watch?v=BXbQw0rE5UE)\
 ### Design Approach		
 _I inverted the clocks, it maybe increases the poetic visual nature
 ![illustrative images](./03_inverted.png)
-_I can picture a printed as well as digital environment ( also as audiovisual piece)
-
-
+_I can picture a printed as well as digital environment ( also an audiovisual piece)
+Example: Image-slider based Story telling:
+![illustrative images](./slider.png)
 
 ## Process		
 
@@ -54,18 +54,7 @@ Most occuring time in 285 images is:
 09:00 o clock (seven times)\
 06:00 o clock (six times)\
 
-  ### Design		
- I would like to stress the verticallity of the visualization, inspired by long finding of long textscrolls iin the dataset. A centered layout could stress this verticallity. The medium could be printed (poster size) or displayed on screen experiencable via a long scroll.		
- The colors of the sketch are not final. When having the graphic in code, I would also like to try using only grayscale and test if thats still legible.		
- The chosen font *gc16* is serif, but monospaced; a rare mixe. The serif character supports the textual character of the topic; while the monospace nature gives it something modern.		
+## Questions		
+What would be an interesting (and conceptional fitting) crossrefence?
+Which medium would transports the wanted poetic feeling best ?
 
-  The images are for now an example taken from each time period. I will also test to take examples of each Medium.		
-
-  ### Questions		
-
-  — How can I sort first after **time-period,** and then sort again items after **medium** within each time-period?		
- — What is the best practice to realise my sketch (pure html, p5 or d3)?		
-
- 
-  ### Attachment: Final draft		
- ![illustrative images](./sketch_poster.jpg)
