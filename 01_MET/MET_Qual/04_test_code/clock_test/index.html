@@ -1,0 +1,43 @@
+<html>
+<head>
+<title></title>
+<script type="text/javascript">
+
+var d = new Date();
+var m = d.getMinutes();
+var h = d.getHours();
+
+window.onload = function(){CLOCKimage();}
+
+function CLOCKimage() {
+var CLimages = [
+  { pic:"CLimage1.png"}, 
+  { pic:"CLimage2.png"},
+  { pic:"CLimage3.png"},
+  { pic:"CLimage4.png"}
+]; 
+
+
+var CL = 0;
+// if ((h == 14, m == 30) && (h == 13, m <= 32)) { DJ = 1; }
+// if ((h == 13, m >= 32) && (h == 13, m <= 34)) { DJ = 2; }
+// if ((h == 13, m >= 34) && (h == 13, m <= 36)) { DJ = 3; }
+
+if (h == 14, m == 28) { CL = 1; }
+if (h == 14, m == 27) { CL = 2; }
+if (h == 14, m == 26) { CL = 3; }
+if (h == 14, m == 13) { CL = 4; }
+  
+  document.getElementById('CLimage').src = CLimages[CL].pic; 
+  document.getElementById('CLimage').alt = CLimages[CL].pic;}
+
+
+</script>
+</head>
+<body>
+
+<body onload="CLOCKimage()">
+<img id="CLimage" src="" alt="CLimage">
+ 
+</body>
+</html>

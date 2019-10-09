@@ -6,7 +6,7 @@ let folder = "images";
 let loadedImagesCount = 0;
 
 function setup() {
- 	createCanvas(1200,1200);
+ 	createCanvas(800,600);
   // loading the json data. Since this is asynchronous, we use a callback for loading the images
   met_data = loadJSON("data.json", loadImages);
 }
@@ -34,7 +34,7 @@ function drawImages() {
   fill(255);
   textSize(8);
   for(var i=0; i<met_data.length; i++){
-      image(images[i],img_width,width/10);
+      image(images[i],i*20,i*20);
       text(met_data[i].title, i*20,i*20);
   }
 }
