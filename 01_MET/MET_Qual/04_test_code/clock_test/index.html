@@ -1,12 +1,67 @@
 <html>
   <meta http-equiv="Refresh" content="10"> 
 <head>
+  <style>
   
+/*.CLimage {*/
+/*  position: absolute;*/
+/*  left: 300;*/
+/*  top: 245px;*/
+/*}*/
+
+.clearfix {
+  overflow: auto;
+}
+
+/*.div.imgone{*/
+/*  float: left;*/
+/*  width: 33.33%;*/
+
+/*}*/
+
+/*.imgone {*/
+/*  float: left;*/
+/*  right: 400;*/
+/*  top: 0px;*/
+/*}*/
+
+/*.imgtwo {*/
+/*  position: absolute;*/
+/*  right: 200;*/
+/*  top: 0px;*/
+/*}*/
+
+p {
+   font-family: monospace;
+   text-align: left;
+   position: absolute;
+   top: 200px;
+   left: 55px;
+   width: 240px;
+
+}
+
+h1 {
+  font-family: monospace;
+  text-align: left;
+}
+
+
+img {
+    margin-right: 100px;
+    position: relative;
+    top: 35px
+}
+
+</style>
+
+
 <body>
   <h1>Through Time and Space</h1>
+ <div> <body onload="CLOCKimage()">
    <p id="myP"></p>
-  <body onload="CLOCKimage()">
-  <img id="CLimage" alt="CLimage"></img>
+  <img id="CLimage" alt="CLimage" style="float:right"></img>
+  <img id="UFimage" alt="UFimage" style="float:right" margin: "250px"></img></div>
  
 </body>
 
@@ -21,27 +76,40 @@ var h = d.getHours();
 
 function CLOCKimage() {
 var CLimages = [
-  { img:"CLimage1.png"}, 
+  { img:"01_06.jpg"}, 
   { img:"CLimage2.png"},
   { img:"CLimage3.png"},
   { img:"CLimage4.png"}
 ]; 
 
-let myP = [
-"sfgfg",
+var UFimages = [
+  { img:"test.jpg"}, 
+  { img:"CLimage2.png"},
+  { img:"CLimage3.png"},
+  { img:"CLimage4.png"}
+]; 
+
+
+var myP = [
+"SOURCE stated that no further objects were observed until approximately 0135 hours, whan two (2) much dimmer lights appeared and performed gyrations while traversing in a parallel course in a south southwest direction",
+
 "schmah",
 "klsd",
 "jndf"];
   
   var CL = 0;
 
-    if (h == 17 && m == 04) { CL = 1; }
-    if (h == 17 && m == 05) { CL = 2; }
-    if (h == 17 && m == 06) { CL = 3; } 
-    if (h == 17 && m == 07) { CL = 4; } 
+    if (h == 17 && m == 04) { CL = 0; }
+    if (h == 17 && m == 05) { CL = 1; }
+    if (h == 17 && m == 06) { CL = 2; } 
+    if (h == 17 && m == 07) { CL = 3; } 
   
   document.getElementById('CLimage').src = CLimages[CL].img; 
   document.getElementById('CLimage').alt = CLimages[CL].img;
+  
+  document.getElementById('UFimage').src = UFimages[CL].img;
+  document.getElementById('UFimage').alt = UFimages[CL].img;
+  
   document.getElementById("myP").innerHTML = myP[CL];}
 
 </script>
