@@ -1,5 +1,5 @@
 <html>
-  <meta http-equiv="Refresh" content="50"> 
+  <meta http-equiv="Refresh" content="30"> 
 <head>
   <style>
   
@@ -502,6 +502,8 @@ var UFimages = [
 // "144"];
   
   var CL = 0;
+  var M = 0;
+  var holder = [ "no data"];
   
     if (h == 13 && m == 06) { CL = 1; }
     if (h == 13 && m == 29) { CL = 2; } 
@@ -659,9 +661,12 @@ var UFimages = [
     if (h == 24 && m == 48) { CL = 142; }
     if (h == 24 && m == 50) { CL = 143; }
     if (h == 24 && m == 55) { CL = 144; }
-    
-  document.getElementById("myP").innerHTML = myP[CL];
+    else {M = 1}
+
   
+
+  document.getElementById("myP").innerHTML = myP[CL];
+
   document.getElementById('CLimage').src = CLimages[CL].img; 
   document.getElementById('CLimage').alt = CLimages[CL].img;
   
