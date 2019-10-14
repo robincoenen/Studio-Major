@@ -9,11 +9,11 @@
 
 
 ### Introduction		
-*Time is a most profound human phenomenon* — Lee Smolin, physicist\
-*Time is a lack of knowledge* — Carlo Rovelli, physicist and writer\
-*More space means more time* — Richard Muller, physicist\
-*The disorder in the universe is constantly increasing* — colloquial description of entropy\
-*Equation-wise – the first thing to do is to consider time as officially ended* — Sun Ra, Jazzmusician\
+*Time is a most profound human phenomenon* — Lee Smolin, physicist
+*Time is a lack of knowledge* — Carlo Rovelli, physicist and writer
+*More space means more time* — Richard Muller, physicist
+*The disorder in the universe is constantly increasing* — colloquial description of entropy
+*Equation-wise – the first thing to do is to consider time as officially ended* — Sun Ra, Jazzmusician
 
 ### Concept		
  I saw the tag "clock" in the tags of the MET and started wondering at which time a painter actual draws the time, if a clock/watch appears in his 
@@ -80,6 +80,8 @@ Which medium would transports the wanted poetic feeling best?
 ### *More space means more time* — Richard Muller, physicist\
 ### *The disorder in the universe is constantly increasing* — colloquial description of entropy\
 ### *Equation-wise – the first thing to do is to consider time as officially ended* — Sun Ra, Jazzmusician\
+
+![illustrative images](./preview.png)
 
 
 ## Concept
