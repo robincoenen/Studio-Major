@@ -1,8 +1,12 @@
 # Blind watches make…		
  ## Artistic approach towards the aesthetic and inherent nature of found watches in the collection	
  [working title, title in analogy to "the blind watchmaker" ]
+ 
+#### **please find final concept/design at the end**
 
   ![illustrative images](./01_illustrative_image_a.png)		
+
+
 
 ### Introduction		
 *Time is a most profound human phenomenon* — Lee Smolin, physicist\
@@ -43,6 +47,9 @@ It could be interesting to crossreference potential datasets which are documente
 * I can picture a printed as well as digital environment ( also an audiovisual piece)
 Example: Image-slider based Story telling:
 ![illustrative images](./04_slider.png)
+* a Visualization visually oriented on the circular Nature of CLocks. Images of Clocks which show the same time are shown at the same position.
+Mockup: 
+![illustrative images](./05_circular-viz.png)
 
 ## Process		
 
@@ -60,3 +67,39 @@ Most occuring time in 285 images is:
 ## Questions		
 What would be an interesting (and conceptional fitting) crossrefence?
 Which medium would transports the wanted poetic feeling best?
+\
+\
+\
+
+# Final		
+
+## Through Time to Space
+
+### *Time is a most profound human phenomenon* — Lee Smolin, physicist\
+### *Time is a lack of knowledge* — Carlo Rovelli, physicist and writer\
+### *More space means more time* — Richard Muller, physicist\
+### *The disorder in the universe is constantly increasing* — colloquial description of entropy\
+### *Equation-wise – the first thing to do is to consider time as officially ended* — Sun Ra, Jazzmusician\
+
+
+## Concept
+ALl Images showing clocks are downloaded from the MET Open Access Collection. 
+In order to find out the time shown in each image, all ca. 300 images were batch processed through Mechanical turk.
+As Time and Space are inevitably related the Dataset "Project blue book" (and similiars) was crossreferenced. 
+Its content archived (among other) phenomena of how human describe and imagine objects coming from another space/time dimension.
+The descriptions supports the poetic visuality of the downloaded clock images. 
+Furthermore if the U.F.O files contained images, these images and the clock images are layoutet in juxtaposition to each other.
+These contents are then displayed on a Website and shown at the current actual time analog to the time shown on the images.
+This kind of visualisation feels more fitting to such a poetic topic. It could be nicely in an installion.\
+\
+-> https://robincoenen.github.io/Studio-Major/
+
+## Data
+An own Dataset was created.
+![illustrative images](./06_dataset.png)
+I coded Everything from scratch through javascript ( hardcoded for now. Which is a proof of how clean the new dataset was created. 
+However in future I want to reduce the the code and replace it through functions)
+
+
+## Images from the website
+
