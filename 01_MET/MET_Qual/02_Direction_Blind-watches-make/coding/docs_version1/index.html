@@ -1,0 +1,739 @@
+<html>
+<head>    <meta http-equiv="Refresh" content="50"> 
+
+  <style>
+  
+p {
+   font-family: monospace;
+   text-align: left;
+   font-size: 16px;
+   position: absolute;
+   top: 38%;
+   left: 55px;
+   width: 290px;
+
+}
+
+h1 {
+  font-family: monospace;
+  text-align: left;
+  position: absolute;
+  left: 55px;
+  font-size: 16px;
+}
+
+
+img {
+    margin-right: 100px;
+    padding-right: 70px;
+    position: relative;
+    top: 125px;
+    z-index: -1;
+    
+}
+
+</style>
+
+<body>
+  <h1>Through Time and Space</h1>
+  <body onload="CLOCKimage()" onload= "TXTNext()">
+   
+  <div id="div" style="float:right"><div id="text"><p id="myP"></p></div>
+  <img id="CLimage" alt="CLimage"></img>
+  <img id="UFimage" alt="UFimage"></img></div>
+ 
+</body>
+
+<script type="text/javascript">
+
+
+var d = new Date();
+var m = d.getMinutes();
+var h = d.getHours();
+
+// setTimeout(() => {
+//   console.log(new Date().toDateString())
+// }, 500)
+
+var CLimages = [
+{ img:"nodata.png"},
+{ img:"01_06.jpg"},
+{ img:"01_29.jpg"},
+{ img:"01_30.jpg"},
+{ img:"01_35.jpg"},
+{ img:"01_36.jpg"},
+{ img:"01_37.jpg"},
+{ img:"01_40.jpg"},
+{ img:"01_46.jpg"},
+{ img:"01_49.jpg"},
+{ img:"01_50.jpg"},
+{ img:"01_51.jpg"},
+{ img:"01_52.jpg"},
+{ img:"01_54.jpg"},
+{ img:"01_55.jpg"},
+{ img:"02_00.jpg"},
+{ img:"02_20.jpg"},
+{ img:"02_22.jpg"},
+{ img:"02_24.jpg"},
+{ img:"02_30.jpg"},
+{ img:"02_35.jpg"},
+{ img:"02_39.jpg"},
+{ img:"02_43.jpg"},
+{ img:"02_45.jpg"},
+{ img:"02_46.jpg"},
+{ img:"02_50.jpg"},
+{ img:"02_51.jpg"},
+{ img:"02_54.jpg"},
+{ img:"02_55.jpg"},
+{ img:"03_00.jpg"},
+{ img:"03_03.jpg"},
+{ img:"03_08.jpg"},
+{ img:"03_10.jpg"},
+{ img:"03_15.jpg"},
+{ img:"03_19.jpg"},
+{ img:"03_25.jpg"},
+{ img:"03_30.jpg"},
+{ img:"03_32.jpg"},
+{ img:"03_40.jpg"},
+{ img:"03_41.jpg"},
+{ img:"03_44.jpg"},
+{ img:"03_45.jpg"},
+{ img:"03_55.jpg"},
+{ img:"04_00.jpg"},
+{ img:"04_05.jpg"},
+{ img:"04_17.jpg"},
+{ img:"04_30.jpg"},
+{ img:"04_38.jpg"},
+{ img:"04_40.jpg"},
+{ img:"04_50.jpg"},
+{ img:"04_53.jpg"},
+{ img:"04_54.jpg"},
+{ img:"04_55.jpg"},
+{ img:"04_56.jpg"},
+{ img:"04_59.jpg"},
+{ img:"05_03.jpg"},
+{ img:"05_19.jpg"},
+{ img:"05_25.jpg"},
+{ img:"05_45.jpg"},
+{ img:"05_46.jpg"},
+{ img:"05_59.jpg"},
+{ img:"06_00.jpg"},
+{ img:"06_05.jpg"},
+{ img:"06_08.jpg"},
+{ img:"06_11.jpg"},
+{ img:"06_15.jpg"},
+{ img:"06_17.jpg"},
+{ img:"06_23.jpg"},
+{ img:"06_25.jpg"},
+{ img:"06_30.jpg"},
+{ img:"06_37.jpg"},
+{ img:"06_40.jpg"},
+{ img:"06_45.jpg"},
+{ img:"07_00.jpg"},
+{ img:"07_05.jpg"},
+{ img:"07_07.jpg"},
+{ img:"07_09.jpg"},
+{ img:"07_10.jpg"},
+{ img:"07_18.jpg"},
+{ img:"07_20.jpg"},
+{ img:"07_35.jpg"},
+{ img:"07_36.jpg"},
+{ img:"07_40.jpg"},
+{ img:"07_53.jpg"},
+{ img:"07_58.jpg"},
+{ img:"08_00.jpg"},
+{ img:"08_05.jpg"},
+{ img:"08_09.jpg"},
+{ img:"08_10.jpg"},
+{ img:"08_15.jpg"},
+{ img:"08_16.jpg"},
+{ img:"08_23.jpg"},
+{ img:"08_27.jpg"},
+{ img:"08_30.jpg"},
+{ img:"08_36.jpg"},
+{ img:"08_40.jpg"},
+{ img:"08_47.jpg"},
+{ img:"08_49.jpg"},
+{ img:"09_00.jpg"},
+{ img:"09_05.jpg"},
+{ img:"09_09.jpg"},
+{ img:"09_10.jpg"},
+{ img:"09_13.jpg"},
+{ img:"09_14.jpg"},
+{ img:"09_15.jpg"},
+{ img:"09_16.jpg"},
+{ img:"09_17.jpg"},
+{ img:"09_30.jpg"},
+{ img:"09_45.jpg"},
+{ img:"09_56.jpg"},
+{ img:"10_00.jpg"},
+{ img:"10_02.jpg"},
+{ img:"10_07.jpg"},
+{ img:"10_08.jpg"},
+{ img:"10_09.jpg"},
+{ img:"10_10.jpg"},
+{ img:"10_15.jpg"},
+{ img:"10_16.jpg"},
+{ img:"10_18.jpg"},
+{ img:"10_25.jpg"},
+{ img:"10_35.jpg"},
+{ img:"10_36.jpg"},
+{ img:"11_00.jpg"},
+{ img:"11_03.jpg"},
+{ img:"11_10.jpg"},
+{ img:"11_12.jpg"},
+{ img:"11_20.jpg"},
+{ img:"11_25.jpg"},
+{ img:"11_30.jpg"},
+{ img:"11_40.jpg"},
+{ img:"11_53.jpg"},
+{ img:"11_57.jpg"},
+{ img:"11_58.jpg"},
+{ img:"12_04.jpg"},
+{ img:"12_15.jpg"},
+{ img:"12_20.jpg"},
+{ img:"12_30.jpg"},
+{ img:"12_31.jpg"},
+{ img:"12_35.jpg"},
+{ img:"12_36.jpg"},
+{ img:"12_39.jpg"},
+{ img:"12_42.jpg"},
+{ img:"12_48.jpg"},
+{ img:"12_50.jpg"},
+{ img:"12_55.jpg"},
+{ img:"nodata.png"},
+{ img:"nodata.png"},
+{ img:"nodata.png"},
+{ img:"nodata.png"},
+{ img:"nodata.png"},
+{ img:"nodata.png"},
+{ img:"nodata.png"},
+{ img:"nodata.png"},
+{ img:"nodata.png"},
+{ img:"nodata.png"},
+{ img:"nodata.png"}
+
+
+]; 
+
+var UFimages = [
+{ img:"nodata.png"},
+{ img:"u-01_06.jpg"},
+{ img:"nodata.png"},
+{ img:"u-01_30.jpg"},
+{ img:"nodata.png"},
+{ img:"u-01_36.jpg"},
+{ img:"u-01_37.jpg"},
+{ img:"u-01_40.jpg"},
+{ img:"u-01_46.jpg"},
+{ img:"nodata.png"},
+{ img:"nodata.png"},
+{ img:"u-01_51.jpg"},
+{ img:"nodata.png"},
+{ img:"nodata.png"},
+{ img:"u-01_55.jpg"},
+{ img:"u-02_00.jpg"},
+{ img:"nodata.png"},
+{ img:"nodata.png"},
+{ img:"u-02_24.jpg"},
+{ img:"u-02_30.jpg"},
+{ img:"u-02_35.jpg"},
+{ img:"u-02_39.jpg"},
+{ img:"nodata.png"},
+{ img:"nodata.png"},
+{ img:"nodata.png"},
+{ img:"nodata.png"},
+{ img:"u-02_51.jpg"},
+{ img:"nodata.png"},
+{ img:"nodata.png"},
+{ img:"nodata.png"},
+{ img:"u-03_03.jpg"},
+{ img:"u-03_08.jpg"},
+{ img:"u-03_10.jpg"},
+{ img:"u-03_15.jpg"},
+{ img:"nodata.png"},
+{ img:"nodata.png"},
+{ img:"nodata.png"},
+{ img:"nodata.png"},
+{ img:"nodata.png"},
+{ img:"nodata.png"},
+{ img:"u-03_44.jpg"},
+{ img:"u-03_45.jpg"},
+{ img:"u-03_55.jpg"},
+{ img:"u-04_00.jpg"},
+{ img:"u-04_05.jpg"},
+{ img:"u-04_17.jpg"},
+{ img:"u-04_30.jpg"},
+{ img:"u-04_38.jpg"},
+{ img:"nodata.png"},
+{ img:"nodata.png"},
+{ img:"u-04_53.jpg"},
+{ img:"u-04_54.jpg"},
+{ img:"nodata.png"},
+{ img:"u-04_56.jpg"},
+{ img:"nodata.png"},
+{ img:"u-05_04.jpg"},
+{ img:"u-05_19.jpg"},
+{ img:"u-05_25.jpg"},
+{ img:"u-05_45.jpg"},
+{ img:"nodata.png"},
+{ img:"nodata.png"},
+{ img:"u-06_00.jpg"},
+{ img:"nodata.png"},
+{ img:"nodata.png"},
+{ img:"u-06_11.jpg"},
+{ img:"u-06_15.jpg"},
+{ img:"nodata.png"},
+{ img:"nodata.png"},
+{ img:"nodata.png"},
+{ img:"nodata.png"},
+{ img:"u-06_37.jpg"},
+{ img:"u-06_40.jpg"},
+{ img:"u-06_45.jpg"},
+{ img:"u-07_00.jpg"},
+{ img:"u-07_05.jpg"},
+{ img:"u-07_07.jpg"},
+{ img:"nodata.png"},
+{ img:"nodata.png"},
+{ img:"nodata.png"},
+{ img:"u-07_20.jpg"},
+{ img:"nodata.png"},
+{ img:"nodata.png"},
+{ img:"nodata.png"},
+{ img:"u-07_53.jpg"},
+{ img:"nodata.png"},
+{ img:"u-08_00.jpg"},
+{ img:"u-08_05.jpg"},
+{ img:"nodata.png"},
+{ img:"u-08_10.jpg"},
+{ img:"nodata.png"},
+{ img:"u-08_16.jpg"},
+{ img:"nodata.png"},
+{ img:"nodata.png"},
+{ img:"nodata.png"},
+{ img:"nodata.png"},
+{ img:"nodata.png"},
+{ img:"nodata.png"},
+{ img:"nodata.png"},
+{ img:"u-09_00.jpg"},
+{ img:"nodata.png"},
+{ img:"nodata.png"},
+{ img:"nodata.png"},
+{ img:"nodata.png"},
+{ img:"nodata.png"},
+{ img:"nodata.png"},
+{ img:"u-09_16.jpg"},
+{ img:"nodata.png"},
+{ img:"nodata.png"},
+{ img:"nodata.png"},
+{ img:"u-09_56.jpg"},
+{ img:"u-10_00.jpg"},
+{ img:"nodata.png"},
+{ img:"nodata.png"},
+{ img:"nodata.png"},
+{ img:"u-10_09.jpg"},
+{ img:"nodata.png"},
+{ img:"u-10_15.jpg"},
+{ img:"nodata.png"},
+{ img:"nodata.png"},
+{ img:"u-10_25.jpg"},
+{ img:"u-10_35.jpg"},
+{ img:"nodata.png"},
+{ img:"nodata.png"},
+{ img:"nodata.png"},
+{ img:"nodata.png"},
+{ img:"u-11_12.jpg"},
+{ img:"u-11_20.jpg"},
+{ img:"u-11_25.jpg"},
+{ img:"u-11_30.jpg"},
+{ img:"u-11_40.jpg"},
+{ img:"nodata.png"},
+{ img:"nodata.png"},
+{ img:"nodata.png"},
+{ img:"nodata.png"},
+{ img:"nodata.png"},
+{ img:"nodata.png"},
+{ img:"nodata.png"},
+{ img:"nodata.png"},
+{ img:"nodata.png"},
+{ img:"nodata.png"},
+{ img:"nodata.png"},
+{ img:"u-12_42.jpg"},
+{ img:"u-12_48.jpg"},
+{ img:"nodata.png"},
+{ img:"nodata.png"},
+{ img:"nodata.png"},
+{ img:"nodata.png"},
+{ img:"nodata.png"},
+{ img:"nodata.png"},
+{ img:"nodata.png"},
+{ img:"nodata.png"},
+{ img:"nodata.png"},
+{ img:"nodata.png"},
+{ img:"nodata.png"},
+{ img:"nodata.png"},
+{ img:"nodata.png"},
+{ img:"nodata.png"},
+{ img:"nodata.png"},
+{ img:"nodata.png"}
+];
+
+ var myP = [
+    "GROUND-VISUAL  NAKED EYE NOT APPLICABLE  TIME AND DATE OF SIGHTING: 15/0106",  "TIME 0129 0129:20 0129:30 0129:45 0130 Georef. Coord. OB 2115 CA3158 CA3938 CA4112 CA4500 Fade",  "TIME 0129 0129:20 0129:30 0129:45 0130 Georef. Coord. OB 2115 CA3158 CA3938 CA4112 CA4500 Fade" , "SOURCE stated that no further objects were observed until approximately 0135 hours, whan two (2) much dimmer lights appeared and performed gyrations while traversing in a parallel course in a south southwest direction" , "(1) 0136 hours (2) saw fireball about 20 degrees to the right of the moon and 20 to 30 degrees above horizon. Reported sonic boom. 3 1/2 seconds after flash. Sighted fragment with red streaks falling out." , "They said they watched if hover near the field and dart about the valley until 1:37 a.m when it disappeared to the north." , "0140 LOCAL 29 JUNE ****** SAW A BRIGHT BURNING OBJECT IN SOUTHWEST AREA " , "(A) 18 OCT 0146Z (B) CLEAR '(DARKNESS)" , "1960 MAY 21 01 49" , "2. Exact time of observation (local): 01:50 CST 3. Position of observer: Top of Hanger"  , "31 Mar at 0151 hours: AF-89 on routine intercept."  , "[...] which is located approx. 200 yards South of the intersection of Colonial Drive and Forest Street, Orlando, Florida, when he saw a light in the sky at approx. 0152 hours on 31 Jan 49." , "On November 30, 1953, at 0154 G.M.T., in lat. 7˙49‘N., lon. 25˙33‘W., a very brilliant meteor was observed." , "[...] stated that he was Sergeant of the Guard on the morning of 31 Jan 49 and at 0155 hours[...] He noticed a single lighted object in the Sky which looked to him like a Aircraft about to crash and then like a falling star." , "3. DATE TIME GROUP: Local: —, GMT 15/0200Z 4. TYPE OF OBSERVATION: Ground Visual, Air Visual 5. PHOTOS: No 6. SOURCE: MILITARY & CIVILIAN" , "0040 hrs local 0220 hrs local 2315 hrs local",  "Because the sightings were of a moving star-like point-source of light, the information was given to the Space Defense Center (SDC) [...]" , "Sometime during the time interval from 0222–0225 DG scribbled a note ' close as 10 miles; 1770 knots; [...]" , "Sometime during the time interval from 0222–0225 DG scribbled a note ' close as 10 miles; 1770 knots; [...]"  , "At 02.30 am Sep 06 East of City, 35 degrees above horizon moving South-East."  , "The reports is by two independent witnesses. One said that the object disappeared at 0235. The other stated that the object disappeared at 0300. There were several bright stars in the area."  , "02:39 A.M"  , "His observation was made on 13 November 1952 at 0243 hours (MST) while he was taking scheduled winds-aloft measurements using balloons and theodolite. He first noticed a faint buich-white light coming toward him from the northwest." , "IT HOVERED FROM SIDE TO SIDE TRACING A GREEN PATH LINE. AT THIS TIME IT WAS ABOUT 0245 HOURS AND WE RETURNED HOME" , "RECEIVED 02 46" , "Very bright greenish obj, half size of moon, appeared at 45 dgr elevation descending. Size of orange when disappeared" , "About 0251 : [...] P asked W if there was a target in the 12:00 position. W responded '... a strong target at 12:00 to you at 20 miles ... 2 miles off the coast, 10 miles south of Cape Campbell." , "About 0254 : [...] P responded 'No sighting of that one." , "The passengers were unaware of any target close enough to 'merge' with." , "Returning as usual, from St' Vincent's Hospital to my home - as above - a short distance - and a regular route for several years - at 3 AM or near that time — in the month of February. At an Intersection of five roads - which I have to cross - there is a fairly large garage. Attached to the garage is a  small space (wired in) where three or four cars sometimes park." , "On 22 June 1962 at 0303 Z an object leaving a smoke or vapor trail was observed [...] The object was reported to be brighter than a first magnitude star, white in color and to have moved from a bearing of 340 to 345 at an elevation of 7." , "At 0308 houra the initial report was received from a maintenance team enroute."  , "About 10 after 3 AM, I was with Officer XXXXXXX, at 9th and II Streets searching for an address, when I saw an odd glare coming down shining down, and attracted attention."  , "[...] at 0315 to 0326 Z, [...] he picked up an unknown object on Theodolite [...]" , "The NG-12 Fire Control System did not have any radar contacts after 0319Z" , "OBJECT WAS SEEN BRIEFLY GLOWING BRIGHTLY AND LEAVING A TRAIL LIKE A Roman candle: OBJECT WAS SIGHTED AT 0325 LOCAL."  , "GMT 0330 PHOTOS No LENGTH OF OBSERVATION 5-10 seconds BRIEF SUMMARY OF SIGHTING One (1) silver object, possible spherical, approximately the size of a penny held at arms length was observed to fly directly away from the observer at what was estimated a speed much greater than that of a conventional jet." , "0332 CST PHOTOS No LENGTH OF OBSERVATION 12 seconds BRIEF SUMMARY OF SIGHTING Yellowish color. No tail. Erratic." , "DESCENDING AWAY FROM OBSERVER INTO HORIZON. SLOWLY INTO HORIZON IN THE EAST. 0340 THROUGH 0405 CST" , "Missile site 7, Altus AFB, Oklahoma, Sunrise 0528 am at 35 degrees N beginning of twilight 0341 am." , "I was over 98W-45N at approx 0344Z, heading towards the NE at time of sighting.  Object appeared as a bright star. Turned red as a bright light when it appeared to zig-zag."  , "RECEIVED 03 45" , "0355Z Houston, Texas" , "Time and date of sightings: 0400 Z Light conditions: Night" , "At about 0405 hours, Central Daylight Saving Time [...] source was awakened by a noise similar to the drone of an electric motor, and saw a brighter than usual sky thru the south-east windows of the first floor bedroom of his home." , "0417 A/C requests final to touchdown at 0440." , "Time of first and last sighting 0430 0455" , "At approximately 0438 hours on 17 September 1952, Cpl Harold N. Blair, observed a flying saucer type object fly over post 33 where he was sentry on duty."  , "At 0440 L.C.T November 8, 1953, in lat. 33 50 N., long. 123 57 E., a very brilliant meteor was observed traveling in a southeasterly direction very near the zenith." , "Spotted object at 300 degree TRUE; notified radio. Later check - it appeared to be lights from cars going down highway out beyond Pilots Knob, [...]" , "[...] and the time was 0453 local by Lieutenant Griffins's watch."  , "[...] Lights were observed from 6410 to 0445 PDT then disappeared for one minute reappearing at 0446 for one minute PD the lights again reappeared at 0454 PD [...]"  , "Time of first and last sighting:  0430 0455 Were observers aided in their observation:  This observer used binoculars for most of the time." , "Maneuveurs: Down to the horizon Direction last observed: West Time of first sighting: 0445 EST Time of last sighting: 0456 EST" , "Single object of varying brightness, white varying to orange and Red [...] and one Change of Heading 0442 to 0459 EST" , "It was about five o'clock in the morning when the incident occured."  , "DATE TIME GROUP 0519Z PHOTOS No LENGTH OF OBSERVATION Approximativ 40minutes" , "At 0525 CST, radar called for my attention to the scope, and I first noted small bright blips returns, [...]"  , "At 0545 contact lost and fade."  , "The sun at 0546 local time was only approx 6 degrees above the horizon and the shadow of an object at 500 ft altitude would have been cast 4757 ft away from a point vertically under the object."  , "She reported the observation to the Durham, North Carolina, Filter Center at 0559 and was instructed to continue watching the object."  , "Facing due south the formation disappeared at six o'clock fairly high. They just flew into the night due north."  , "Object disappeared 0605, 13 January due to the on-coming daylight."  , "Rainy to slight drizzle 0608 15 Miles None" , "TIME 06_11 DIRECTION OF TAKEOFF South All four descriptions vary either in size, color, shape, or sound" , "[...] they departed Amarillo at 0400 hours and arrived in Memphis at 0615 hours. Xxxxx further related the second trajectory appeared 10 to 20 feet from the first trajectory.According to xxxxx, the cloud formation was moving rapidly and upon his arrival at Memphis, Texas, the formation had begun to disintegrate."  , "Observers at Camp Carson sighted a silvery unidentified flying object at 0617 MST."  , "At 0600 hours until 0623 he was at the corner of Needmore and Rt 25 waiting for his delocopter. He was constantly checking the sky for weather. He saw nothing in the sky, not any stars nighter." , "DATE - TIME GROUP 29/0625Z BRIEF SUMMARY Bright light in sky at 320 deg true. COMMENTS Salellite ruled out since ECHO 1 and 2 were over Southern Hemisphere at time of sighting." , "At 0630 I saw a bright light moving generally South no North." , "[...] burst after one hour at 0637. Wind. Was from WNW toward Los Angeles, weather was clear." , "Time of day: 06 40." , "Exact time of observation: 0645 MST What attracted attention to object: Reflection from sun Apparent size: Appeared at first to be a star"  , "A rancher who lives in the Chaco reported that on 20 February at approximately 0700 hours, he was at a ranch house in the neighborhood of Villa a disc cross the sky giving off an intense green color." , "07 05 Your name has been given to the Aerial Phenomena Office (Project Blue Book) as being a witness to an unidentified flying object." , "TIME 0707" , "From 0709 your priority message on sighting of fireball received." , "Sunrise was at 0710 CST" , "Time: 0718 hours, Object was under observation from five to ten minutes." , "On Monday morning, 17 October, at about 0720, Mr. Xxxxxxxx was in the Power-house where the Geiger counter is located. While looking out of the window he saw a small black object without visible projections, going in a southwesterly direction at a high rate of speed." , "At 0735 I arrived at the GCA Unit." , "Returning at 07:36" , "FAA observations were conducted during the approximate period of 0740 GMT." , "TIME 0753" , "PEAR SHAPED YELLOW LIGHT GLOW NONE STRAIGHT LINE INTO CLOUDS 30 SECONDS OCT 19 58" , "The first team was on duty from 2400 until 0400, and the second team was on watch from 0400 until 0800." , "27 Sep 0805 Alaskan Standard Time Night, cloudy, dull moon" , "0809 A PD OBJECT WAS FIRST SEEN NORTH WEST OF INTERSECTION OF TWO MAIN RUNWAYS" , "On 23 September at approximately 0810 ST a bogie was sighted about 50,000 feet over Long Beach." , "At 0815 EST, Cape XXXXXX called to say that at 2300 EST he and Major XXXXXXX observed an unusual object from Tipp City. They were observing the sky through a 6inch telescope when Major XXXXXX observed this object moving." , "TIME OF SIGHTING: 0816 EST" , "0823 Object now reversed direction and moving towar site" , "0827 Two are seen now." , "0830 Just are in sight now when it passed over site lit looked like two high headlights" , "08 36 Disappeared for 3 minutes then reappeared." , "0840 Hovering 4 miles away 1 to 2000 feet very dim white light." , "0847 hours Object N/W, reversed and moving off again S/E" , "0849 hours Disappear then reappears and coming back N-777 from S/E, lights getting brighter" , "[...] at approximately 0900 hours he was on a flight [...] with two passengers and that they observed flying objects about 1000 feet above his altitude, flying in the. Same direction as he but at a faster rate of speed."  , "At 0905 GMT I obtained a definite clinometer reading which was 30 degrees above the plane of earth." , "0909 Steady 335 2000" , "At 0910 a bluish spherical light with a tapering tail was observed moving soundlessly at a tremendous speed and at a great distance, parallel to the horizon, for 3 seconds." , "Reference your message 0913" , "During the time of timed observation, from 0823 to 0914, this object did not. Change size, position, nor intensity and vanished completely in approximately 15 seconds." , "I arrived in N. San Juan at approximately 0915 hrs." , "Saw 2 more at 21:10hr. Until 21:16 hr." , "Called Indianapolis Center about aircraft sighting of 14. Sept 0917z" , "At 0930 GMT broken clouds blocked further view of the unidentified flying objects." , "0945 In night — stationary position" , "An unidentified object was observed at 0956 hours, 7 August, at Pinecastle Air Force Base, Orlando, Florida." , "All this I saw very plainly, about 9:30 or 10 o'clock at night." , "GMT 1002 Flame color with red sparks. Appeared to be burning." , "With reference to your report of an unusual occurrence of sound on '9th May 1975, it has been determined that the most probable cause was an ambulance siren -  Investigations have revealed that at 10-07 PM on  9th May , an accident, which occurred in Mountain Highway T  Bays water, was reported [...]" , "At 10:08 the total phase ends and the moon begins to emerge from the shadow." , "Middle of eclipse 10:09 EST" , "At 10:10 p.m E.S.T [...] my co-pilot and I saw what we thought was a brilliant meteor." , "Puente, California, 1015 hours, 1 February SPECIAL INQUIRY" , "25,000‘ scattered, 12 miles visibility, 1016 hours." , "1018 MILES CITY, MONTANA, TRAVELING SALESMAN, ******" , "Contact was again re-established to the south at 1025 and a legible track lasting 40 seconds changes." , "THEY GRADUALLY BECAME SMALLER AND SMALLER AND DISAPPEARING AT 1035." , "1036 ATTN ATIAA CMA WAS RED THEN ORANGE CMA THEN YELLOW CMA MOVING SE CMA OBSERVED 2 OR 3 MINUTES " , "Information received indicates that Mr XXXXXXXXX at 1100 hours, on 13 May, while driving from Caldwell to Boise, Idaho on U.S. Route No. 30, observed a silvery object in the western sky." , "1103 PST; no cloud cover; visibility 30 miles, wind WSW at 20 miles per hour, temperature 65 F." , "[...] had telephonically reported that she had just seen what she thought was a flying disc at 1110 hours flying over her home [...]" , "1112 ATT calls and reports that trouble on teletype lines are caused by earth current and we may expect this condition to last for some time." , "At 11.30 hours, 29 March, an unidentified object was observed approximately 20 miles north of Misawa, this sighting was made by an Air Force Pilot flying a T-6 type aircraft." , "Round silver disc object cam left a puff exhaust pd altitude estimate at. 10.000 to 15.000 FT Observed at 1125 EDT CMA" , "Steady to the Southwest Below horizon gradually 1130 – 1137" , "150 miles south of here, where several citizens reported seeing what the believed was a meteor about 11:40 p.m EST Thursday." , "File dvd 11 53 (Tehran, Iran)" , "Date and Time of Observation: 6 Nov 1157 hrs Where sighted: Immediately above Radar Site at Wakkanai, Japan" , "CHANGE 1158 ZULU TO 23 58 ZULU" , "NAKED EYE AND. BINOCULARS BINOCULARS NOT APPLICABLE 1204 EST 5 DECEMBER" , "PHENOMENON SIGHTED. AT 1215 24 DEC" , "I made the two sightings at 1220 and 1226. The first observation lasted 1 minute and the second one lasted 1 minute." , "9 May, 1200 PLST — No known activity which could account for sighting." , "1231 hours (departing)" , "At 1235, 10 December, Sgt Jones received a collect call from a Nancy Guntle of Fort Recovery, Ohio. She stated ever since last Thursday night, she and her husband has been followed by this UFO (Thing she called it later)" , "Exact time of observation: 1236 hours Color of object: Bright white with slight greenish tinge." , "I saw the same thing at 1239 Lima time, which means 1839 GMT, working on the Pilot-Ballon-Observation-Stand at Kanzel Observatory" , "Speed not estimated No sound Moved from SE to SSE Hovered for 35 seconds Disappeared rapidly SSE SSE into Overcat 23 October, 1242, for approximately 40 seconds" , "At approximately 1248 hours, on 240 degrees, magnetic heading, and 15.000 feet altitude, S/Ldr. Higgin made an ejaculation to the effect, 'did you see that'?  I did not." , "Between 1245 and 1250 hours, 5 December, HRS. Secretary at the Security Division, Oak Ridge, while standing on Tennessee Avenue at the west end of the bus platform across from the Post Office, observed an object over the top of the Post Office building, flying in an easterly. Direction at a slow speed, at a distance of approximately two (2) miles and at an altitude of about 500 feet." , "Reached Zenith of 79 DEG at 1255 Local traveling northwest to southeast.", "Time is a most profound human phenomenon - Lee Smolin, physicist", "Time is a lack of knowledge - Carlo Rovelli, physicist and writer", "More space means more time - Richard Muller, physicist", "Equation-wise - the first thing to do is to consider time as officially ended - Sun Ra, Jazzmusician","This website compares the time, which appears on clock images from the MET Collection, with an archive of UFO sightings protocolls; It takes text extracts from these protocolls, where the time is mentioned, and thus creates a visual poem about time and space.","This website compares the time, which appears on clock images from the MET Collection, with an archive of UFO sightings protocolls; It takes text extracts from these protocolls, where the time is mentioned, and thus creates a visual poem about time and space.","This website compares the time, which appears on clock images from the MET Collection, with an archive of UFO sightings protocolls; It takes text extracts from these protocolls, where the time is mentioned, and thus creates a visual poem about time and space.","This website compares time appearing on clock images of the MET with UFO sightings","If the time provided by an clock image from the MET Collection matches the actual current, it will be displayed here - along with a text extract from the protocoll of an UFO Sighting from the same time.","This website compares the time, which appears on clock images from the MET Collection, with an archive of UFO sightings protocolls; It takes text extracts from these protocolls, where the time is mentioned, and thus creates a visual poem about time and space."]
+   
+  
+
+function CLOCKimage() {
+  
+  
+
+
+var CL = 0;
+var chances = Math.floor(Math.random() * 10) + 45;
+var randomtext = chances + 100;
+
+
+
+    if (h == 13 && m == 06) { CL = 1; }
+        else { CL = randomtext; }
+        
+    if (h == 13 && m == 29) { CL = 2; } 
+    if (h == 13 && m == 30) { CL = 3; } 
+    if (h == 13 && m == 35) { CL = 4; }
+    if (h == 13 && m == 36) { CL = 5; }
+    if (h == 13 && m == 37) { CL = 6; } 
+    if (h == 13 && m == 40) { CL = 7; } 
+    if (h == 13 && m == 46) { CL = 8; }
+    if (h == 13 && m == 49) { CL = 9; }
+    if (h == 13 && m == 50) { CL = 10; } 
+    if (h == 13 && m == 51) { CL = 11; } 
+    if (h == 13 && m == 52) { CL = 12; }
+    if (h == 13 && m == 54) { CL = 13; }
+    if (h == 13 && m == 55) { CL = 14; }
+    if (h == 01 && m == 06) { CL = 1; }
+    if (h == 01 && m == 29) { CL = 2; } 
+    if (h == 01 && m == 30) { CL = 3; } 
+    if (h == 01 && m == 35) { CL = 4; }
+    if (h == 01 && m == 36) { CL = 5; }
+    if (h == 01 && m == 37) { CL = 6; } 
+    if (h == 01 && m == 40) { CL = 7; } 
+    if (h == 01 && m == 46) { CL = 8; }
+    if (h == 01 && m == 49) { CL = 9; }
+    if (h == 01 && m == 50) { CL = 10; } 
+    if (h == 01 && m == 51) { CL = 11; } 
+    if (h == 01 && m == 52) { CL = 12; }
+    if (h == 01 && m == 54) { CL = 13; }
+    if (h == 01 && m == 55) { CL = 14; }
+    
+    if (h == 14 && m == 00) { CL = 15; }
+    if (h == 14 && m == 20) { CL = 16; }
+    if (h == 14 && m == 22) { CL = 17; }
+    if (h == 14 && m == 24) { CL = 18; }
+    if (h == 14 && m == 30) { CL = 19; }
+    if (h == 14 && m == 35) { CL = 20; }
+    if (h == 14 && m == 39) { CL = 21; }
+    if (h == 14 && m == 43) { CL = 22; } 
+    if (h == 14 && m == 45) { CL = 23; }
+    if (h == 14 && m == 46) { CL = 24; }
+    if (h == 14 && m == 50) { CL = 25; } 
+    if (h == 14 && m == 51) { CL = 26; } 
+    if (h == 14 && m == 54) { CL = 27; } 
+    if (h == 14 && m == 55) { CL = 28; } 
+    
+    if (h == 02 && m == 00) { CL = 15; }
+    if (h == 02 && m == 20) { CL = 16; }
+    if (h == 02 && m == 22) { CL = 17; }
+    if (h == 02 && m == 24) { CL = 18; }
+    if (h == 02 && m == 30) { CL = 19; }
+    if (h == 02 && m == 35) { CL = 20; }
+    if (h == 02 && m == 39) { CL = 21; }
+    if (h == 02 && m == 43) { CL = 22; } 
+    if (h == 02 && m == 45) { CL = 23; }
+    if (h == 02 && m == 46) { CL = 24; }
+    if (h == 02 && m == 50) { CL = 25; } 
+    if (h == 02 && m == 51) { CL = 26; } 
+    if (h == 02 && m == 54) { CL = 27; } 
+    if (h == 02 && m == 55) { CL = 28; }
+
+    if (h == 15 && m == 00) { CL = 29; }
+    if (h == 15 && m == 03) { CL = 30; }
+    if (h == 15 && m == 08) { CL = 31; }
+    if (h == 15 && m == 10) { CL = 32; }
+    if (h == 15 && m == 15) { CL = 33; }
+    if (h == 15 && m == 19) { CL = 34; }
+    if (h == 15 && m == 25) { CL = 35; }
+    if (h == 15 && m == 30) { CL = 36; }
+    if (h == 15 && m == 32) { CL = 37; }
+    if (h == 15 && m == 40) { CL = 38; }
+    if (h == 15 && m == 41) { CL = 39; }
+    if (h == 15 && m == 44) { CL = 40; }
+    if (h == 15 && m == 45) { CL = 41; }
+    if (h == 15 && m == 55) { CL = 42; }
+    
+    if (h == 03 && m == 00) { CL = 29; }
+    if (h == 03 && m == 03) { CL = 30; }
+    if (h == 03 && m == 08) { CL = 31; }
+    if (h == 03 && m == 10) { CL = 32; }
+    if (h == 03 && m == 15) { CL = 33; }
+    if (h == 03 && m == 19) { CL = 34; }
+    if (h == 03 && m == 25) { CL = 35; }
+    if (h == 03 && m == 30) { CL = 36; }
+    if (h == 03 && m == 32) { CL = 37; }
+    if (h == 03 && m == 40) { CL = 38; }
+    if (h == 03 && m == 41) { CL = 39; }
+    if (h == 03 && m == 44) { CL = 40; }
+    if (h == 03 && m == 45) { CL = 41; }
+    if (h == 03 && m == 55) { CL = 42; }
+
+    if (h == 16 && m == 00) { CL = 43; }
+    if (h == 16 && m == 05) { CL = 44; }
+    if (h == 16 && m == 17) { CL = 45; }
+    if (h == 16 && m == 30) { CL = 46; } 
+    if (h == 16 && m == 38) { CL = 47; }
+    if (h == 16 && m == 40) { CL = 48; }
+    if (h == 16 && m == 50) { CL = 49; }
+    if (h == 16 && m == 53) { CL = 50; }  
+    if (h == 16 && m == 54) { CL = 51; }
+    if (h == 16 && m == 55) { CL = 52; }
+    if (h == 16 && m == 56) { CL = 53; }
+    if (h == 16 && m == 59) { CL = 54; }  
+    
+    if (h == 04 && m == 00) { CL = 43; }
+    if (h == 04 && m == 05) { CL = 44; }
+    if (h == 04 && m == 17) { CL = 45; }
+    if (h == 04 && m == 30) { CL = 46; } 
+    if (h == 04 && m == 38) { CL = 47; }
+    if (h == 04 && m == 40) { CL = 48; }
+    if (h == 04 && m == 50) { CL = 49; }
+    if (h == 04 && m == 53) { CL = 50; }  
+    if (h == 04 && m == 54) { CL = 51; }
+    if (h == 04 && m == 55) { CL = 52; }
+    if (h == 04 && m == 56) { CL = 53; }
+    if (h == 04 && m == 59) { CL = 54; } 
+
+
+    if (h == 17 && m == 03) { CL = 55; }
+    if (h == 17 && m == 19) { CL = 56; }
+    if (h == 17 && m == 25) { CL = 57; }
+    if (h == 17 && m == 45) { CL = 58; }
+    if (h == 17 && m == 46) { CL = 59; }
+    if (h == 17 && m == 59) { CL = 60; }
+    
+    if (h == 05 && m == 03) { CL = 55; }
+    if (h == 05 && m == 19) { CL = 56; }
+    if (h == 05 && m == 25) { CL = 57; }
+    if (h == 05 && m == 45) { CL = 58; }
+    if (h == 05 && m == 46) { CL = 59; }
+    if (h == 05 && m == 59) { CL = 60; }
+    
+    if (h == 18 && m == 00) { CL = 61; }
+    if (h == 18 && m == 05) { CL = 62; }
+    if (h == 18 && m == 08) { CL = 63; }
+    if (h == 18 && m == 11) { CL = 64; }
+    if (h == 18 && m == 15) { CL = 65; }
+    if (h == 18 && m == 17) { CL = 66; }
+    if (h == 18 && m == 23) { CL = 67; }
+    if (h == 18 && m == 25) { CL = 68; }
+    if (h == 18 && m == 30) { CL = 69; }
+    if (h == 18 && m == 37) { CL = 70; }
+    if (h == 18 && m == 40) { CL = 71; }
+    if (h == 18 && m == 45) { CL = 72; }
+    
+    if (h == 06 && m == 00) { CL = 61; }
+    if (h == 06 && m == 05) { CL = 62; }
+    if (h == 06 && m == 08) { CL = 63; }
+    if (h == 06 && m == 11) { CL = 64; }
+    if (h == 06 && m == 15) { CL = 65; }
+    if (h == 06 && m == 17) { CL = 66; }
+    if (h == 06 && m == 23) { CL = 67; }
+    if (h == 06 && m == 25) { CL = 68; }
+    if (h == 06 && m == 30) { CL = 69; }
+    if (h == 06 && m == 37) { CL = 70; }
+    if (h == 06 && m == 40) { CL = 71; }
+    if (h == 06 && m == 45) { CL = 72; }
+    
+    if (h == 19 && m == 00) { CL = 73; }
+    if (h == 19 && m == 05) { CL = 74; }
+    if (h == 19 && m == 07) { CL = 75; }
+    if (h == 19 && m == 09) { CL = 76; }
+    if (h == 19 && m == 10) { CL = 77; }
+    if (h == 19 && m == 18) { CL = 78; }
+    if (h == 19 && m == 20) { CL = 79; }
+    if (h == 19 && m == 35) { CL = 80; }
+    if (h == 19 && m == 36) { CL = 81; }
+    if (h == 19 && m == 40) { CL = 82; }
+    if (h == 19 && m == 53) { CL = 83; }
+    if (h == 19 && m == 58) { CL = 84; }
+    
+    if (h == 07 && m == 00) { CL = 73; }
+    if (h == 07 && m == 05) { CL = 74; }
+    if (h == 07 && m == 07) { CL = 75; }
+    if (h == 07 && m == 09) { CL = 76; }
+    if (h == 07 && m == 10) { CL = 77; }
+    if (h == 07 && m == 18) { CL = 78; }
+    if (h == 07 && m == 20) { CL = 79; }
+    if (h == 07 && m == 35) { CL = 80; }
+    if (h == 07 && m == 36) { CL = 81; }
+    if (h == 07 && m == 40) { CL = 82; }
+    if (h == 07 && m == 53) { CL = 83; }
+    if (h == 07 && m == 58) { CL = 84; }
+    
+    if (h == 20 && m == 00) { CL = 85; }
+    if (h == 20 && m == 05) { CL = 86; }
+    if (h == 20 && m == 09) { CL = 87; }
+    if (h == 20 && m == 10) { CL = 88; }
+    if (h == 20 && m == 15) { CL = 89; }
+    if (h == 20 && m == 16) { CL = 90; }
+    if (h == 20 && m == 23) { CL = 91; }
+    if (h == 20 && m == 27) { CL = 92; }
+    if (h == 20 && m == 30) { CL = 93; }
+    if (h == 20 && m == 36) { CL = 94; }
+    if (h == 20 && m == 40) { CL = 95; }
+    if (h == 20 && m == 47) { CL = 96; }
+    if (h == 20 && m == 49) { CL = 97; }
+    
+    if (h == 08 && m == 00) { CL = 85; }
+    if (h == 08 && m == 05) { CL = 86; }
+    if (h == 08 && m == 09) { CL = 87; }
+    if (h == 08 && m == 10) { CL = 88; }
+    if (h == 08 && m == 15) { CL = 89; }
+    if (h == 08 && m == 16) { CL = 90; }
+    if (h == 08 && m == 23) { CL = 91; }
+    if (h == 08 && m == 27) { CL = 92; }
+    if (h == 08 && m == 30) { CL = 93; }
+    if (h == 08 && m == 36) { CL = 94; }
+    if (h == 08 && m == 40) { CL = 95; }
+    if (h == 08 && m == 47) { CL = 96; }
+    if (h == 08 && m == 49) { CL = 97; }
+    
+    if (h == 21 && m == 00) { CL = 98; }
+    if (h == 21 && m == 05) { CL = 99; }
+    if (h == 21 && m == 09) { CL = 100; }
+    if (h == 21 && m == 10) { CL = 101; }
+    if (h == 21 && m == 13) { CL = 102; }
+    if (h == 21 && m == 14) { CL = 103; }
+    if (h == 21 && m == 15) { CL = 104; }
+    if (h == 21 && m == 16) { CL = 105; }
+    if (h == 21 && m == 17) { CL = 106; }
+    if (h == 21 && m == 30) { CL = 107; }
+    if (h == 21 && m == 45) { CL = 108; }
+    if (h == 21 && m == 56) { CL = 109; }
+    
+    if (h == 09 && m == 00) { CL = 98; }
+    if (h == 09 && m == 05) { CL = 99; }
+    if (h == 09 && m == 09) { CL = 100; }
+    if (h == 09 && m == 10) { CL = 101; }
+    if (h == 09 && m == 13) { CL = 102; }
+    if (h == 09 && m == 14) { CL = 103; }
+    if (h == 09 && m == 15) { CL = 104; }
+    if (h == 09 && m == 16) { CL = 105; }
+    if (h == 09 && m == 17) { CL = 106; }
+    if (h == 09 && m == 30) { CL = 107; }
+    if (h == 09 && m == 45) { CL = 108; }
+    if (h == 09 && m == 56) { CL = 109; }
+    
+    if (h == 22 && m == 00) { CL = 110; }
+    if (h == 22 && m == 02) { CL = 111; }
+    if (h == 22 && m == 07) { CL = 112; }
+    if (h == 22 && m == 08) { CL = 113; }
+    if (h == 22 && m == 09) { CL = 114; }
+    if (h == 22 && m == 10) { CL = 115; }
+    if (h == 22 && m == 15) { CL = 116; }
+    if (h == 22 && m == 16) { CL = 117; }    
+    if (h == 22 && m == 18) { CL = 118; }
+    if (h == 22 && m == 25) { CL = 119; }
+    if (h == 22 && m == 35) { CL = 120; }
+    if (h == 22 && m == 36) { CL = 121; }
+    
+    if (h == 10 && m == 00) { CL = 110; }
+    if (h == 10 && m == 02) { CL = 111; }
+    if (h == 10 && m == 07) { CL = 112; }
+    if (h == 10 && m == 08) { CL = 113; }
+    if (h == 10 && m == 09) { CL = 114; }
+    if (h == 10 && m == 10) { CL = 115; }
+    if (h == 10 && m == 15) { CL = 116; }
+    if (h == 10 && m == 16) { CL = 117; }    
+    if (h == 10 && m == 18) { CL = 118; }
+    if (h == 10 && m == 25) { CL = 119; }
+    if (h == 10 && m == 35) { CL = 120; }
+    if (h == 10 && m == 36) { CL = 121; }
+    
+    if (h == 23 && m == 00) { CL = 122; }
+    if (h == 23 && m == 03) { CL = 123; }
+    if (h == 23 && m == 10) { CL = 124; }
+    if (h == 23 && m == 12) { CL = 125; }
+    if (h == 23 && m == 20) { CL = 126; }
+    if (h == 23 && m == 25) { CL = 127; }
+    if (h == 23 && m == 30) { CL = 128; }
+    if (h == 23 && m == 40) { CL = 129; }    
+    if (h == 23 && m == 53) { CL = 130; }
+    if (h == 23 && m == 57) { CL = 131; }
+    if (h == 23 && m == 58) { CL = 132; }
+    
+    if (h == 11 && m == 00) { CL = 122; }
+    if (h == 11 && m == 03) { CL = 123; }
+    if (h == 11 && m == 10) { CL = 124; }
+    if (h == 11 && m == 12) { CL = 125; }
+    if (h == 11 && m == 20) { CL = 126; }
+    if (h == 11 && m == 25) { CL = 127; }
+    if (h == 11 && m == 30) { CL = 128; }
+    if (h == 11 && m == 40) { CL = 129; }    
+    if (h == 11 && m == 53) { CL = 130; }
+    if (h == 11 && m == 57) { CL = 131; }
+    if (h == 11 && m == 58) { CL = 132; }
+    
+    if (h == 24 && m == 04) { CL = 133; }
+    if (h == 24 && m == 15) { CL = 134; }
+    if (h == 24 && m == 20) { CL = 135; }
+    if (h == 24 && m == 30) { CL = 136; }
+    if (h == 24 && m == 31) { CL = 137; }
+    if (h == 24 && m == 35) { CL = 138; }
+    if (h == 24 && m == 36) { CL = 139; }
+    if (h == 24 && m == 39) { CL = 140; }
+    if (h == 24 && m == 42) { CL = 141; }
+    if (h == 24 && m == 48) { CL = 142; }
+    if (h == 24 && m == 50) { CL = 143; }
+    if (h == 24 && m == 55) { CL = 144; }
+    
+    if (h == 12 && m == 04) { CL = 133; }
+    if (h == 12 && m == 15) { CL = 134; }
+    if (h == 12 && m == 20) { CL = 135; }
+    if (h == 12 && m == 30) { CL = 136; }
+    if (h == 12 && m == 31) { CL = 137; }
+    if (h == 12 && m == 35) { CL = 138; }
+    if (h == 12 && m == 36) { CL = 139; }
+    if (h == 12 && m == 39) { CL = 140; }
+    if (h == 12 && m == 42) { CL = 141; }
+    if (h == 12 && m == 48) { CL = 142; }
+    if (h == 12 && m == 50) { CL = 143; }
+    if (h == 12 && m == 55) { CL = 144; }
+    
+    
+
+var counter = 0;
+
+setInterval(()=>{
+	if( counter < myP.length+190 ){
+  document.getElementById("myP").innerHTML = myP[CL].slice(0,counter);
+    counter++;
+  } 
+}, 90);
+
+  // document.getElementById("myP").innerHTML = myP[CL];
+
+  document.getElementById('CLimage').src = CLimages[CL].img; 
+  document.getElementById('CLimage').alt = CLimages[CL].img;
+  
+  document.getElementById('UFimage').src = UFimages[CL].img;
+  document.getElementById('UFimage').alt = UFimages[CL].img;
+  
+
+}
+
+
+
+  
+  
+</script>
+</head>
+</html>
