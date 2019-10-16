@@ -585,9 +585,7 @@ var randomtext = chances + 100;
 
 
 
-    if (h == 13 && m == 06) { CL = 1; }
-        else { CL = randomtext; }
-        
+    if (h == 13 && m >= 06) { CL = 1; }
     if (h == 13 && m >= 29) { CL = 2; } 
     if (h == 13 && m >= 30) { CL = 3; } 
     if (h == 13 && m >= 35) { CL = 4; }
@@ -900,7 +898,7 @@ var randomtext = chances + 100;
     if (h == 12 && m >= 50) { CL = 143; }
     if (h == 12 && m >= 55) { CL = 144; }
 
-  document.getElementById("myP").innerHTML = myP[CL];
+  document.getElementById("myP").innerHTML = myP[CL-1];
 
   document.getElementById("myNext").innerHTML = myNext[CL];
 
