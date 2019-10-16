@@ -97,7 +97,8 @@ This kind of visualisation feels more fitting to such a poetic topic. It could b
 -> https://robincoenen.github.io/Studio-Major/
 
 ## Data
-An own Dataset was created.
+An own Dataset was created. The clock images were taken from the Open MET Collection and their time analyzed through Mechanical Turk.
+The crosserefenced data set was taken from the "Project Blue Book" (https://en.wikipedia.org/wiki/Project_Blue_Book#Project_Blue_Book_Special_Report_No._14)
 ![illustrative images](./06_dataset.png)
 I coded Everything from scratch through javascript ( hardcoded for now. Which is a proof of how clean the new dataset was created. 
 However in future I want to reduce the the code and replace it through functions)
