@@ -102,6 +102,10 @@ The crosserefenced data set was taken from the "Project Blue Book" (https://en.w
 ![illustrative images](./06_dataset.png)
 Everything is hardcoded from scratch through javascript ( after the presentation on 17th I would like to transform the hardcoded parts into more intelligent code and make the page properly responsive )
 
+## Design
+The simple nature of the website puts emphasis on the three shown elements and their juxtaposition: The text extracts from the UFO sighting protocolls, the clock image and if available an image from the UFO protocoll.
+The use of an monospace font supports the facsimile-kind nature of the shown elements.
+An slowly animated "alert" besides the headline shows when the next match appears; The fact that its animated tells the user that "updates" of the website happens periodically.
 
 ## Images from the website
 ![illustrative images](./example_a.png)
