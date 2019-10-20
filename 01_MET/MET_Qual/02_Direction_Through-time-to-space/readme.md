@@ -85,24 +85,24 @@ Which medium would transports the wanted poetic feeling best?
 
 
 ## Concept
-ALl Images showing clocks are downloaded from the MET Open Access Collection. 
-In order to find out the time shown in each image, all ca. 300 images were batch processed through Mechanical turk.
-As Time and Space are inevitably related the Dataset "Project blue book" (and similiars) was crossreferenced. 
-Its content archived (among other) phenomena of how human describe and imagine objects coming from another space/time dimension.
-The descriptions supports the poetic visuality of the downloaded clock images. 
-Furthermore if the U.F.O files contained images, these images and the clock images are layoutet in juxtaposition to each other.
-These contents are then displayed on a Website and shown at the current actual time analog to the time shown on the images.
-This kind of visualisation feels more fitting to such a poetic topic. It could be nicely in an installion.\
-\
+
+Created was a website which compares time, appearing on clock-images taken from the MET Open Collection, with the time taken from UFO sighting protocolls.
+If the time provided by an clock image from the MET Collection matches the actual current time of the user visiting the website, 
+it will be displayed  - along with a text extract from the protocol of an UFO Sighting (and image if available) from the same time -\
+and thus creates through their juxtaposition a visual poem about time and space.
+
+The UFO sighting protocolls are interesting artefacts how human imagine and describe obects coming from another space-time continuum.
+When seeing an object UFO sighting and reporting it one admits -maybe unconsciously- the existance of another concept of time.
+
 -> https://robincoenen.github.io/Studio-Major/
 
 ## Data
 An own Dataset was created. The clock images were taken from the Open MET Collection and their time analyzed through Mechanical Turk.
 The crosserefenced data set was taken from the "Project Blue Book" (https://en.wikipedia.org/wiki/Project_Blue_Book#Project_Blue_Book_Special_Report_No._14)
 ![illustrative images](./06_dataset.png)
-I coded Everything from scratch through javascript ( hardcoded for now. Which is a proof of how clean the new dataset was created. 
-However in future I want to reduce the the code and replace it through functions)
+Everything is hardcoded from scratch through javascript ( after the presentation on 17th I would like to transform the hardcoded parts into more intelligent code and make the page properly responsive )
 
 
 ## Images from the website
+![illustrative images](./example_a.png)
 
