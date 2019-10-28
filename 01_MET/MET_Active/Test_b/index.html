@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Mouse Spoke</title>
+	<link type="text/css" href="rotating_spoke.css" rel="stylesheet">
+	<script src="https://d3js.org/d3.v3.min.js"></script>
+</head>
+<script>
+ 
+var w = 960,  h = 500 , r = 150;
+ 
+var svg = d3.select("html").append("svg")
+	.attr({width: w, height: h})
+	.on("mousemove", follow_mouse);
+	
+var report = svg.append("text") .attr("id", "report")
+	.attr({x: 80, y: 80})
+	.text("Angle: 0.00°");
+	
+var g0 = svg.append("g").attr("id", "g0")
+	.attr("transform", "translate(" + [w/2, h/2] + ")");
+	
+var spoke_01 = g0.append("path") .attr("id", "spoke_01")
+	.attr("d", "M 0 0 h " + (r-2) + "l -9 3  2 -3 -2 -3 9 3");
+    
+var circle_01 = g0.append("circle").attr("id", "circle_01")
+	.attr("r", r);
+	
+function follow_mouse() {
+	var xy = d3.mouse(circle_01.node());
+	var angle = (180/Math.PI * Math.atan2(xy[1], xy[0]));
+	d3.select("#spoke_01").attr("transform", "rotate(" + angle + ")");
+	d3.select("#report").text("Angle: " + angle.toFixed(2) + "°");
+}
+
+</script>
+</html>

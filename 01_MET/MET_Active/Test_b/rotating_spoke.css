@@ -1,0 +1,20 @@
+svg {
+	background-color: #ddf;
+}
+#circle_01 {
+	fill: white;
+	fill-opacity: 0;
+	stroke: darkorchid;
+	stroke-width: 0;
+}
+#spoke_01 {
+	fill: none;
+	stroke: #602;
+	stroke-width: 1;
+	stroke-linecap: round;
+}
+#report {
+	fill: #602;
+	stroke: none;
+	font: 16pt sans-serif;
+}
