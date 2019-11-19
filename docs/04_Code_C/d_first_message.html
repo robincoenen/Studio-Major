@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Leaflet test</title>
+    <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"></script>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
+    integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+    crossorigin=""/>
+
+    <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
+    integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
+    crossorigin=""></script>
+    
+    <script src="slidemenu/L.Control.SlideMenu.js"></script>
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+   <link rel="stylesheet" type="text/css" href="d_first_message.css">
+</head>
+ 
+
+    
+    
+    
+ 
+    
+<body>
+
+    <div id="headline">The first Message</div><div id= "link"><h4><a href="http://127.0.0.1:49586/e_second_attempt.html">Next chapter</a></h4></div><div id="mapid">
+
+</div>
+</body>
+
+  
+  <script>
+   
+      
+//Map General Einstellungen
+var map = L.map('mapid', {
+	crs: L.CRS.Simple,
+    minZoom: 2,
+    maxZoom: 4,
+    zoomControl: false,
+    maxBoundsViscosity: 0.5,
+
+});
+      
+var bounds = [[0,0], [264,700]];
+var image = L.imageOverlay('d_first_message.jpg', bounds).addTo(map);
+map.fitBounds(bounds);
+
+//Map Starting point und Zoom
+map.setView( [110, 210], 3);
+map.setMaxBounds(bounds);
+   
+     
+//Zoomcontrol
+   
+L.control.zoom   ({
+     position:'topright'
+}).addTo(map);      
+
+ 
+//IMAGES ON MAP
+    ////IMAGES
+    
+    var size = [25, 25]
+    var anchor = [0, 8]
+    var pAnchor = [30,0]
+    var tooltipPos = [0,0]
+      
+    var imageA = L.icon({
+	iconUrl: 'a_thumbnails/circle-15.svg',
+	iconSize:     size,
+	iconAnchor:   anchor,
+	popupAnchor:  pAnchor,
+    tooltipAnchor: pAnchor
+
+});
+       
+      
+          var imageB = L.icon({
+	iconUrl: 'a_thumbnails/square-11.svg',
+	iconSize:     size,
+	iconAnchor:   anchor,
+	popupAnchor:  pAnchor,
+    tooltipAnchor: pAnchor
+
+});
+      
+       ////POSITION
+   
+    var a = L.latLng([ 100, 145 ]);
+      
+    var b = L.latLng([ 132, 355 ]);
+    var c = L.latLng([ 132, 340 ]);
+      
+    var d = L.latLng([ 100, 548 ]);
+    var e = L.latLng([ 125, 500 ]);
+    var f = L.latLng([ 59, 43 ]);
+    var g = L.latLng([ 125, 579 ]);
+
+      
+
+      
+        ////Add to Map
+
+        ////SPECIFIC INFOS
+
+    var markerA = L.marker(a,{icon: imageA, riseOnHover: true}).addTo(map);
+    markerA.bindPopup("<b>The Queen's message to Washington commenced transmission at 10:50 am on August 16, and was completed at 4:30am the next day, taking 17 hours and 40 minutes. It contained 99 words consisting of 509 letters, which averaged about two minutes and five seconds for each letter. And that was just to reach Newfoundland. The cable operated for less than a month.");
+    markerA.bindTooltip("The information", {direction: 'right',opacity: 1, offset: L.point(tooltipPos)});
+      
+       var markerD = L.marker(d,{icon: imageA, riseOnHover: true}).addTo(map);
+    markerD.bindPopup("<b>»The Queen desires to congratulate the President upon the successful completion of this great international work«");
+    markerD.bindTooltip("7th day, Sent 06.29 PM, Message from Valentia to Newfoundland", {direction: 'right',opacity: 1, offset: L.point(tooltipPos)});
+      
+    var markerE = L.marker(e,{icon: imageA, riseOnHover: true}).addTo(map);
+    markerE.bindPopup("<b>»To her Majesty Victoria, Queen of Great Britain: The President cordially reciprocates the congratulations of Her Majesty the Queen, on the success of this great international enterprise accomplished by the science, skill and indomitable energy of the two countries...«");
+    markerE.bindTooltip("10th day, Sent 10.25 AM, Message from Newfoundland to Valentia", {direction: 'right',opacity: 1, offset: L.point(tooltipPos)});
+      
+    var markerF = L.marker(f,{icon: imageA, riseOnHover: true}).addTo(map);
+    markerF.bindPopup("<b>The first official message was carried by a combination of methods: across the Atlantic to Newfoundland by submarine cables; across Newfoundland by an overhead wire supported on poles; across Cabot Strait by submarine cable to Aspy Bay (Dingwall), Cape Breton; and by an overhead wire across Nova Scotia, New Brunswick, and Maine, to Boston and New York");
+    markerF.bindTooltip("The Network of information", {direction: 'right',opacity: 1, offset: L.point(tooltipPos)});
+    
+    var markerG = L.marker(g,{icon: imageA, riseOnHover: true}).addTo(map);
+    markerG.bindPopup("<b>»Directors of Atlantic Telegraph Company, Great Britain, to Directors in America: — Europe and America are united by Telegraph. Glory to God in the hightest, on earth peace, good will towards men«");
+    markerG.bindTooltip("7th day, Sent 11.12 AM, Message from Valentia to Newfoundland", {direction: 'right',opacity: 1, offset: L.point(tooltipPos)});
+       
+      
+            ////PAINTING INFO 
+  
+    var markerB = L.marker(b,{icon: imageB, riseOnHover: true}).addTo(map);
+    markerB.bindPopup("Telegraph House, Trinity Bay, Newfoundland: Interior View of the Mess Room, 1858 <br>Date: 1865 <br>Artist: Robert Charles Dudley");
+    markerB.bindTooltip("Painting Infos", {direction: 'right',opacity: 1, offset: L.point(tooltipPos)});
+   
+    var markerC = L.marker(c,{icon: imageB, riseOnHover: true}).addTo(map);
+    markerC.bindPopup("Trinity Bay, Newfoundland, Exterior View of the Telegraph House in 1857-1858 <br>Date: 1865 <br>Artist: Robert Charles Dudley");
+    markerC .bindTooltip("Painting Infos", {direction: 'right',opacity: 1, offset: L.point(tooltipPos)});
+   
+  
+////INFO MENU
+  
+      
+var slideMenu = L.control.slideMenu('<h5> <b>»Glory to God in the highest; on earth, peace and good will toward men«</b> <br> For the first few messages, 600 volts was applied at the sending end, but the speed (two minutes per letter) was very slow, and the sending-end battery was boosted to 2,000 volts in an effort to increase the working speed. The speed was increased, but the higher voltage overstressed the cable insulation, it began failing in a few hours and went competely dead on September 3, 1858. It was to be six years before telegraph messages were again sent across the Atlantic. <br> However the cornerstone for realtime communication between continents was, literally, laid.<br> From the  Journal of Economic Issues, The Impact of the Telegraph and the Internet:<br> »For the first time, reliable in- stantaneous communication between North America and Europe became a reality. Many thought that the telegraph would help to promote world peace because of the ability to communicate instantaneously in a period of crisis« </h5>', {collapsed: false, position: 'topright', menuposition: 'topright', width: '20%', height: '100vh', delay: '17', icon: 'fa-info-circle'}).addTo(map);
+      
+      
+</script> 
+</html>

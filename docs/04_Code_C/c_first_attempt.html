@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Leaflet test</title>
+    <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"></script>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
+    integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+    crossorigin=""/>
+
+    <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
+    integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
+    crossorigin=""></script>
+    
+    <script src="slidemenu/L.Control.SlideMenu.js"></script>
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+   <link rel="stylesheet" type="text/css" href="c_first_attempt.css">
+</head>
+ 
+
+    
+    
+    
+ 
+    
+<body>
+
+    <div id="headline">The first Attempt</div><div id= "link"><h4><a href="http://127.0.0.1:49586/d_first_message.html">Next chapter</a></h4></div><div id="mapid">
+
+</div>
+</body>
+
+  
+  <script>
+   
+      
+//Map General Einstellungen
+var map = L.map('mapid', {
+	crs: L.CRS.Simple,
+    minZoom: 2,
+    maxZoom: 4,
+    zoomControl: false,
+    maxBoundsViscosity: 0.5,
+
+});
+      
+var bounds = [[0,0], [264,700]];
+var image = L.imageOverlay('c_first_attempt.jpg', bounds).addTo(map);
+map.fitBounds(bounds);
+
+//Map Starting point und Zoom
+map.setView( [110, 50], 3);
+map.setMaxBounds(bounds);
+   
+     
+//Zoomcontrol
+   
+L.control.zoom   ({
+     position:'topright'
+}).addTo(map);      
+
+ 
+//IMAGES ON MAP
+    ////IMAGES
+    
+    var size = [25, 25]
+    var anchor = [0, 8  ]
+    var pAnchor = [30,0]
+    var tooltipPos = [0,0]
+      
+    var imageA = L.icon({
+	iconUrl: 'a_thumbnails/circle-15.svg',
+	iconSize:     size,
+	iconAnchor:   anchor,
+	popupAnchor:  pAnchor,
+    tooltipAnchor: pAnchor
+
+});
+      
+    var imageB = L.icon({
+	iconUrl: 'a_thumbnails/square-11.svg',
+	iconSize:     size,
+	iconAnchor:   anchor,
+	popupAnchor:  pAnchor,
+    tooltipAnchor: pAnchor
+
+});
+      
+       ////POSITION
+   
+    var a = L.latLng([ 175, 565 ]);
+      
+    var b = L.latLng([ 132, 355 ]);
+    var c = L.latLng([ 132, 340 ]);
+      
+    var d = L.latLng([ 110, 110 ]);
+    var e = L.latLng([ 100, 100 ]);
+    var d = L.latLng([ 42, 295   ]);
+    var f = L.latLng([ 70, 490 ]);
+
+      
+        ////Add to Map
+
+    var markerA = L.marker(a,{icon: imageA, riseOnHover: true}).addTo(map);
+    markerA.bindPopup("<b>The laying of the cable was a »great achievement of a century« and lead to multiple celebrations, especially in New York. While celebrating the City Hall started burning, possibly due to the multiple fireworks. »At a few minutes after twelve o'clock flames were observed to issue from the clock-tower of the City Hall, ...«");
+    markerA.bindTooltip("Celebrations", {direction: 'right',opacity: 1, offset: L.point(tooltipPos)});
+      
+    var markerD = L.marker(d,{icon: imageA, riseOnHover: true}).addTo(map);
+    markerD.bindPopup("<b>The telegraphic fleet had all assembled at Plymouth and would sail on an experimental trip in a few days. It consists of the United States frigate Niagara and the British steamers Agamemnon, Valorous, Gorgon and Porcupine.");
+    markerD.bindTooltip("The Mission starts", {direction: 'right',opacity: 1, offset: L.point(tooltipPos)});
+   
+    var markerE = L.marker(e,{icon: imageA, riseOnHover: true}).addTo(map);
+    markerE.bindPopup("<b>HMS Agamemnon took on board the cable armoured by Glass, Elliot and Company, while USS Niagara travelled to the Mersey to load the cable armoured by R.S. Newall & Co.");
+    markerE.bindTooltip("The Ships", {direction: 'right',opacity: 1, offset: L.point(tooltipPos)});
+   
+    var markerF = L.marker(f,{icon: imageA, riseOnHover: true}).addTo(map);
+    markerF.bindPopup("<b>About noon on Thursday a brief telegraphic despatch from Newfoundland reached New York and the other Atlantic cities. It was worded simply, »The Atlantic Telegraph is laid! The U.S. steam frigate Niagara, Captain Hudson, and British war steamer Gorgon, Captain Dayman, arrived at Trinity Bay yesterday (August 4th), and the Atlantic cable, the working of which is perfect, is being landed to-day.«");
+    markerF.bindTooltip("Being landed", {direction: 'right',opacity: 1, offset: L.point(tooltipPos)});
+   
+      
+      
+    ////PAINTING INFO
+
+    var markerB = L.marker(b,{icon: imageB, riseOnHover: true}).addTo(map);
+    markerB.bindPopup("<b>The Bay of Bull Arms, Trinity Bay, Newfoundland, Bonfires Lighted on the Hills to Notify of the Arrival of the Cable Fleet on August 5th, 1858<br>Date: 1865 <br>Artist: Robert Charles Dudley", {keepInView: 'true'});
+    markerB.bindTooltip("Painting Info", {direction: 'right',opacity: 1, offset: L.point(tooltipPos)});
+      
+    var markerC = L.marker(c,{icon: imageB, riseOnHover: true}).addTo(map);
+    markerC.bindPopup("The Cable Fleet Leaving Ireland, July 1858 <br>Date: 1865 <br>Artist: Robert Charles Dudley");
+    markerC.bindTooltip("Painting Info", {direction: 'right',opacity: 1, offset: L.point(tooltipPos)});
+  
+  
+////INFO MENU
+  
+      
+var slideMenu = L.control.slideMenu('<h5> <b>1858 - The first transatlantic cable</b> <br> The first transatlantic cable layed in 1858 just worked for three weeks. The first officially sended message via the Atlantic came from the Queen Victoria in Valentia and from the US-President from Newfoundland.<br><br> From the Atlantic telegraph:<br> »It was about eight oclock on the cloudless morning of August 4 that the cry of - »Land ho!« rang from the mast head of the Niagara, and the terminus of the Atlantic telegraph was in sight. A few hours steam brought the noble vessel to the entrance of Trinity Bay, where she was received by the British war steamer Porcupine, especially detailed for telegraphic service. Large icebergs were seen at a short distance from the land. As the little squadron approached the coast the British ensign was hoisted by the Niagara, and the stars and stripes by the Gorgon, the cable being slowly paid out as the vessels stood in towards the shore. At a little after two A.M., on the 5th of August, preparations commenced for landing the shore end. The Niagaras boats were lowered, and received on board about a mile and a half of heavy cable, which formed the shore end laid last year by the Niagara in Valentia Bay, and was taken up after it broke on the 11th of the month. Three hundred miles had been laid from the Niagara in 1857, a portion of which was recovered by "underrunning" from on board a stout raft or catamaran.«"  </h5>', {collapsed: false, position: 'topright', menuposition: 'topright', width: '20%', height: '100vh', delay: '17', icon: 'fa-info-circle'}).addTo(map);
+      
+      
+</script> 
+</html>

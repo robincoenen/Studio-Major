@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Leaflet test</title>
+    <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"></script>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
+    integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+    crossorigin=""/>
+
+    <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
+    integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
+    crossorigin=""></script>
+    
+    <script src="slidemenu/L.Control.SlideMenu.js"></script>
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+   <link rel="stylesheet" type="text/css" href="f_the_cable.css">
+</head>
+ 
+
+    
+    
+    
+ 
+    
+<body>
+
+    <div id="headline">The Cable</div><div id= "link"><h4><a href="http://localhost:8112/g_the_wiring_world.html">Next chapter</a></h4></div><div id="mapid">
+
+</div>
+</body>
+
+  
+  <script>
+   
+      
+//Map General Einstellungen
+var map = L.map('mapid', {
+	crs: L.CRS.Simple,
+    minZoom: 3,
+    maxZoom: 5,
+    zoomControl: false,
+    maxBoundsViscosity: 0.5,
+
+});
+      
+var bounds = [[0,0], [167,1250]];
+var image = L.imageOverlay('f_the_cable.jpg', bounds).addTo(map);
+map.fitBounds(bounds);
+
+//Map Starting point und Zoom
+map.setView( [110, 110], 3);
+map.setMaxBounds(bounds);
+   
+     
+//Zoomcontrol
+   
+L.control.zoom   ({
+     position:'topright'
+}).addTo(map);      
+
+ 
+//IMAGES ON MAP
+    ////IMAGES
+    
+    var size = [25, 25]
+    var anchor = [0, 8]
+    var pAnchor = [30,0]
+    var tooltipPos = [0,0]
+      
+    var imageA = L.icon({
+	iconUrl: 'a_thumbnails/circle-15.svg',
+	iconSize:     size,
+	iconAnchor:   anchor,
+	popupAnchor:  pAnchor,
+    tooltipAnchor: pAnchor
+
+});
+      
+    
+    var imageB = L.icon({
+	iconUrl: 'a_thumbnails/square-11.svg',
+	iconSize:     size,
+	iconAnchor:   anchor,
+	popupAnchor:  pAnchor,
+    tooltipAnchor: pAnchor
+
+});          
+      
+       ////POSITION
+   
+    var a = L.latLng([ 98, 54 ]);
+      
+    var b = L.latLng([ 83, 245 ]);
+    var c = L.latLng([ 83, 255 ]);
+    var d = L.latLng([ 98, 745 ]);
+    var e = L.latLng([ 98, 755 ]);
+    var f = L.latLng([ 98, 1010 ]);
+      
+    var g = L.latLng([ 70, 420 ]);
+    var h = L.latLng([ 80, 390 ]);     
+    var i = L.latLng([ 64, 650 ]);
+    var j = L.latLng([ 98, 54 ]); 
+    var k = L.latLng([ 60, 1100 ]); 
+    var l = L.latLng([ 115, 1058 ]);
+      
+
+        ////Add to Map
+
+    var markerA = L.marker(a,{icon: imageA, riseOnHover: true}).addTo(map);
+    markerA.bindPopup("<b>AHelloy world!</b><br>I am a popup. sfdknsldfsdnfl  sfnksdfn sflnsf snlfnnljnlnljnnlnl  nllsndjfnsldnfln sndfl nsdlknfl nslfknslknflnslfknsldknflskndflknslf");
+    markerA.bindTooltip("September 8th at Heart's Content, the day of the successful termination", {direction: 'right',opacity: 1, offset: L.point(tooltipPos)});
+      
+    var markerG = L.marker(g,{icon: imageA, riseOnHover: true}).addTo(map);
+    markerG.bindPopup("<b>In 1865 a ship’s first own newspaper was born. In accord with his duties, William H. Russell kept the readers of the Times informed of the enterprise’s progress on a daily basis. Twice a day, the telegraph at Foilhummerum Bay, Valentia, »spread to all parts of the earth a brief account of the doings of the Great Ship.« In return, news from ashore was sent to the ship, which helped the onboard publication of the Atlantic Telegraph —a quest taken on by Henry O’Neil, an accompanying painter.");
+    markerG.bindTooltip("The ship connected with England in Realtime", {direction: 'right',opacity: 1, offset: L.point(tooltipPos)});
+        
+    var markerH = L.marker(h,{icon: imageA, riseOnHover: true}).addTo(map);
+    markerH.bindPopup("<b>The newspapers’ purpose on board was not only to inform but also to entertain. Painter Henry O’Neil went to great lengths “to cause ... some fun at lunch.");
+    markerH.bindTooltip("The ship connected with England in Realtime", {direction: 'right',opacity: 1, offset: L.point(tooltipPos)});   
+      
+    var markerI = L.marker(i,{icon: imageA, riseOnHover: true}).addTo(map);
+    markerI.bindPopup("<b> 1858<br>Atlantic: Ireland-Newfoundland, A few words per hour<br><br> 1866<br>Atlantic: Ireland-Newfoundland, 6-8 words per minute<br><br>1928<br>Newfoundland-Azores, 2.500 characters per minute (~400 wpm)<br><br>1978<br>Atlantic: TAT-7, 4.000 telephone channels<br><br>2015<br>Atlantic-GTT Express (formerly Hibernia Express), 100 Gb/s x 100 wavelengths; Maximum capacity 53 Tb/s");
+    markerI.bindTooltip("Speed of Information over time<br>", {direction: 'right',opacity: 1, offset: L.point(tooltipPos)});         
+      
+    var markerJ = L.marker(j,{icon: imageA, riseOnHover: true}).addTo(map);
+    markerJ.bindPopup("<b>»At length all was declared to be in readiness. The huge paddles began to revolve slowly, the screw was set in motion, and precisely at sixteen minutes after 7 P.M. Greenwich time, (Sunday, July 23d), we commenced paying out the cable, which looked like a thread as it discharged itself over the wheel at the stern of the ship.«");
+    markerJ.bindTooltip("A diary Entry", {direction: 'right',opacity: 1, offset: L.point(tooltipPos)});
+      
+    var markerK = L.marker(k,{icon: imageA, riseOnHover: true}).addTo(map);
+    markerK.bindPopup("<b>On July 27, 1866, only fourteen days after they had embarked on their expedition in Valentia, the Great Eastern and its cable crew reached Heart’s Content, Newfoundland, with a functioning telegraph cable. They finally connected Europe and North America through instantaneous communication");
+    markerK.bindTooltip("27 July 1866", {direction: 'right',opacity: 1, offset: L.point(tooltipPos)});
+    
+    var markerL = L.marker(l,{icon: imageA, riseOnHover: true}).addTo(map);
+    markerL.bindPopup("<b>On August 9, the telegraphic fleet set out again to grapple and complete the 1865 cable, which they successfully did. By mid-September, two cables were open to the public for trans-Atlantic telegraphy. Although public enthusiasm did not reach the exorbitant extent of 1858, it was nevertheless great.");
+    markerL.bindTooltip("September 8th at Heart's Content, the day of the successful termination", {direction: 'right',opacity: 1, offset: L.point(tooltipPos)});
+      
+      
+           ////Painting Info
+      
+    var markerB = L.marker(b,{icon: imageB, riseOnHover: true}).addTo(map);
+    markerB.bindPopup("Forward Deck of the Great Eastern Cleared for the First Attempt to Grapple for the Lost Cable, August 11th, 1865<br>Date: 1865 <br>Artist: Robert Charles Dudley");
+    markerB.bindTooltip("Painting Info", {direction: 'right',opacity: 1, offset: L.point(tooltipPos)});
+      
+       var markerC = L.marker(c,{icon: imageB, riseOnHover: true}).addTo(map);
+    markerC.bindPopup("News Received Through the Atlantic Cable From All Parts of the World, etc.<br>Date: 1866 <br>Artist: Robert Charles Dudley");
+    markerC.bindTooltip("Painting Info", {direction: 'right',opacity: 1, offset: L.point(tooltipPos)});
+    
+      var markerD = L.marker(d,{icon: imageB, riseOnHover: true}).addTo(map);
+    markerD.bindPopup("Splicing the Cable (after the first accident) on board the Great Eastern, July 25th<br>Date: 1865 <br>Artist: Robert Charles Dudley");
+    markerD.bindTooltip("Painting Info", {direction: 'right',opacity: 1, offset: L.point(tooltipPos)});
+    
+      var markerE = L.marker(e,{icon: imageB, riseOnHover: true}).addTo(map);
+    markerE.bindPopup("Landing the Shore End of the Atlantic Cable<br>Date: 1865 <br>Artist: Robert Charles Dudley");
+    markerE.bindTooltip("Painting Info", {direction: 'right',opacity: 1, offset: L.point(tooltipPos)});
+    
+      var markerF = L.marker(f,{icon: imageB, riseOnHover: true}).addTo(map);
+    markerF.bindPopup("September 8th at Heart's Content, the day of the successful termination of the work of laying, recovering, completing and testing the Atlantic Telegraph Cables of 1865 and 1866<br>Date: 1866 <br>Artist: Robert Charles Dudley");
+    markerF.bindTooltip("Painting Info", {direction: 'right',opacity: 1, offset: L.point(tooltipPos)});
+         
+      
+  
+////INFO MENU
+  
+      
+var slideMenu = L.control.slideMenu('<h5> <b>How the World got One</b> <br> The cable transformed the transmission and providing of information from a matter of days into a matter of hours and later minutes. The technique on which our interconnected world is based changed in speed, software and hardware but stays principally the same; wires transfer information. <br><br><b>From the book Wiring the World, Chapter Networking the Atlantic:</b><br>In contrast to every other ship at that time, on board the Great Eastern they were not entirely cut off from the world and time they had just left. But for the first time, men were experiencing the simultaneity of times and so breaking with their traditional time. By the very cable they were laying out, the news flow from Europe continued being sent from the cable station at Valentia. It kept them well informed about what was going on in the “outside” world. They arranged to get Greenwich Time given tot hem every morning through the cable in addition to a daily telegram giving them the general news of the day. In his diary, Gooch remarked that it was “wonderful to get, while in the Atlantic, the news of the morn- ing from The Times.” Moreover, as they moved further west, they began to receive the news “at breakfast, the same as people living in the next street to the Times office. As a result, they created a space of their own outside of their world, yet it was in congruence with the outer world. Not only did they follow Greenwich Time in their recordings, but they also used their connectivity for the continuation of news flows. News not only from Europe but from the entire world reached the small cable community via a combination of mail steamer and telegraph cable.«</h5>', {collapsed: false, position: 'topright', menuposition: 'topright', width: '20%', height: '100vh', delay: '17', icon: 'fa-info-circle'}).addTo(map);
+      
+      
+</script> 
+</html>
