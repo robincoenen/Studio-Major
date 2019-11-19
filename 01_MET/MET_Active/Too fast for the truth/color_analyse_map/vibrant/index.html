@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Vibrant.js example</title>
+<script src="libraries/vibrant.js"></script>
+<style>
+/* Style for the swatches & image */
+  .swatch {
+    display:inline-block;
+    border: 1px solid  white;
+    height:50px;
+    width:50px;
+    /*float:left;*/
+    box-sizing:border-box;
+  }
+  img{
+    width:600px;
+  }
+
+</style>
+</head>
+<body>
+  <h1>Water elements</h1>
+<div id="palette_container"></div>
+
+  <h1>Structure elements</h1>
+<div id="palette_containerb"></div>
+
+  <h1>Earth elements</h1>
+  <div id="palette_containerc"></div>
+
+
+
+</body>
+</html>
+
+<script type="text/javascript">
+
+console.log('file running');
+  // Use `Vibrant` in script
+  // Vibrant is exported to global. window.Vibrant === Vibrant
+
+//WATER ELEMENTS
+
+let images = ['sea/DP119840.jpg','sea/DP801232.jpg','sea/DP801255.jpg', 'sea/DP801371.jpg'];
+var container = document.getElementById("palette_container");
+
+const init = async () => {
+  for (let i=0; i<images.length; i++){
+    let url = images[i];
+    console.log("=================",images[i]);
+    await Vibrant.from(url).getPalette(function(err, palette) {
+      for (var swatch in palette){
+        console.log(swatch, palette[swatch].getHex());
+  
+        const div = document.createElement("div");
+        div.classList.add('swatch');
+        div.style.backgroundColor = palette[swatch].getHex();
+        console.log('========= add')
+        container.appendChild(div);
+      }
+    });
+    
+    let linebreak = document.createElement('div');
+    container.appendChild(linebreak);
+    
+  }  
+}
+
+init();
+  
+
+  
+  //STRUCTURE ELEMENTS
+
+  let mages = ['stru/DP801234.jpg','stru/DP801243.jpg', 'stru/DP801249.jpg', 'stru/DP801259.jpg', 'stru/DP801260.jpg', 'stru/DP801367.jpg'];
+var containerb = document.getElementById("palette_containerb");
+
+const nit = async () => {
+  for (let i=0; i<mages.length; i++){
+    let url = mages[i];
+    
+    await Vibrant.from(url).getPalette(function(err, palette) {
+      for (var swatch in palette){
+        //console.log(swatch, palette[swatch].getHex());
+  
+        const div = document.createElement("div");
+        div.classList.add('swatch');
+        div.style.backgroundColor = palette[swatch].getHex();
+        containerb.appendChild(div);
+      }
+    });
+    
+    let linebreak = document.createElement('div');
+    containerb.appendChild(linebreak);
+    
+  }  
+}
+
+nit();
+
+  //EARTH ELEMENTS
+
+  let ages = ['earth/DP801235.jpg', 'earth/DP801263.jpg','earth/DP801265.jpg','earth/DP801370.jpg','earth/DP801372.jpg' ];
+var containerc = document.getElementById("palette_containerc");
+
+const it = async () => {
+  for (let i=0; i<ages.length; i++){
+    let url = ages[i];
+    
+    await Vibrant.from(url).getPalette(function(err, palette) {
+      for (var swatch in palette){
+        //console.log(swatch, palette[swatch].getHex());
+  
+        const div = document.createElement("div");
+        div.classList.add('swatch');
+        div.style.backgroundColor = palette[swatch].getHex();
+        containerc.appendChild(div);
+      }
+    });
+    
+    let linebreak = document.createElement('div');
+    containerc.appendChild(linebreak);
+    
+  }  
+};
+
+it();
+</script>
