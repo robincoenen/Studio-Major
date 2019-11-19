@@ -2,7 +2,7 @@
 
 
 
-1) Project here: http://robincoenen.de/atlantic_cable/a_faster_than_sun.html
+1) Project here: http://robincoenen.de/atlantic_cable/a_faster_than_sun.html (view in Chrome)
 2) Readme here:  https://github.com/robincoenen/Studio-Major/blob/master/01_MET/MET_Active/readme_A.pdf
 
 
