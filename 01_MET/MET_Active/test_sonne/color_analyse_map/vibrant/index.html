@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Vibrant.js example</title>
+<script src="libraries/vibrant.js"></script>
+<style>
+/* Style for the swatches & image */
+  .swatch {
+    display:inline-block;
+    height:50px;
+    width:50px;
+    /*float:left;*/
+  }
+  
+  
+  img{
+    width:600px;
+  }
+
+</style>
+</head>
+<body>
+
+  <h1>Earth elements</h1>
+  <svg width="600" height="2000"> <foreignObject id="palette_container" width="600" height="2000"></foreignObject></svg>
+
+  <h1>Structure elements</h1>
+  
+  <svg width="600" height="2000"> <foreignObject id="palette_containerb" width="600" height="2000"></foreignObject></svg>
+
+
+</body>
+</html>
+
+<script type="text/javascript">
+
+console.log('file running');
+  // Use `Vibrant` in script
+  // Vibrant is exported to global. window.Vibrant === Vibrant
+
+
+
+  //EARTH ELEMENTS
+
+
+
+//WATER ELEMENTS
+
+let images = [
+'earth/DP810298.png','earth/DP821308.jpg'
+ ];
+var container = document.getElementById("palette_container");
+
+
+  let mages = [
+'sea/DP810298.jpg'];
+var containerb = document.getElementById("palette_containerb");
+
+const nit = async () => {
+  for (let i=0; i<mages.length; i++){
+    let url = mages[i];
+    
+    await Vibrant.from(url).getPalette(function(err, palette) {
+      for (var swatch in palette){
+        console.log(Vibrant.from(url));
+        //console.log(swatch, palette[swatch].getHex());
+  
+        const div = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+        div.classList.add('swatch');
+        div.style.backgroundColor = palette[swatch].getHex();
+        containerb.appendChild(div);
+      }
+    });
+    
+    let linebreak = document.createElement('div');
+    containerb.appendChild(linebreak);
+    
+  }  
+}
+
+nit();
+
+const init = async () => {
+  for (let i=0; i<images.length; i++){
+    let url = images[i];
+    console.log("=================",images[i]);
+    await  Vibrant.from(url).getPalette(function(err, palette) {
+      for (var swatch in palette){
+        console.log(swatch, palette[swatch].getHex());
+  let dist = "900px"
+        const div = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+        div.classList.add('swatch');
+        div.style.backgroundColor = palette[swatch].getHex();
+
+        console.log('========= add')
+        container.appendChild(div);
+      }
+    });
+    
+    let linebreak = document.createElement('div');
+    container.appendChild(linebreak);
+    
+  }  
+}
+
+init();
+
+
+
+</script>

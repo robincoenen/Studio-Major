@@ -14,21 +14,31 @@ var request = require('request')
 const url = 'https://collectionapi.metmuseum.org/public/collection/v1/objects'
 
 // object Ids I want to download
-const myObjectIds = [
-  436524,
- 705155,
- 11922,
- 2032,
- 343052,
- 2019,
- 208554,
- 360837,
- 207869
-]
+const myObjectIds = [811067, 
+774715, 
+738533, 
+403245, 
+54870, 
+700955, 
+744908, 
+334422, 
+334102, 
+385971, 
+392479, 
+385965, 
+386151, 
+369334, 
+364286, 
+397262, 
+417884, 
+788038, 
+787996, 
+787995, 
+384283];
 
 
 // set up empty Array for us to save results to
-const myArray = []
+const myArray = [];
 
 function fetchUrl(objectId){
     request(url + '/' + objectId, function (error, response, body) {
@@ -42,6 +52,8 @@ function fetchUrl(objectId){
       myArray[index] = {};
       myArray[index]["objectID"] = obj.objectID;
       myArray[index]["title"] = obj.title;
+      myArray[index]["country"] = obj.country;
+      myArray[index]["artist"]= obj.artistDisplayName
       myArray[index]["date"] = obj.objectBeginDate;
       myArray[index]["primaryImage"] = obj.primaryImage;
       myArray[index]["filename"] = obj.primaryImage.split('/').pop();
@@ -57,4 +69,4 @@ myObjectIds.forEach(objectId => {
 // it will automatically run after 2000 ms
 setTimeout(() => {
     fs.writeFileSync('./data.json', JSON.stringify(myArray), 'utf8')
-}, 2000)
+}, 10000)

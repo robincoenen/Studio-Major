@@ -1,6 +1,6 @@
 // var fs = require('fs');
 
-const searchUrl = 'https://collectionapi.metmuseum.org/public/collection/v1/search?q=text';
+const searchUrl = 'https://collectionapi.metmuseum.org/public/collection/v1/search?q=working';
 //const searchUrl = 'https://collectionapi.metmuseum.org/public/collection/v1/tags';
 const objectBaseUrl = 'https://collectionapi.metmuseum.org/public/collection/v1/objects/';
 
