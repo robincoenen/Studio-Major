@@ -125,3 +125,8 @@
  
   ### Attachment: Final draft		
  ![illustrative images](./sketch_poster.jpg)
+ 
+ 
+ 
+  # Final visualization as poster		
+![illustrative images](./final_poster.png)
